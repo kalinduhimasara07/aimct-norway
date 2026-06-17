@@ -202,24 +202,44 @@ html:not(.js-enabled) .splash {
   z-index: 2;
   width: clamp(132px, 16vw, 240px);
   height: 3px;
-  overflow: hidden;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.24);
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.32) 0px,
+    rgba(255, 255, 255, 0.32) 1px,
+    rgba(255, 255, 255, 0.1) 1px,
+    rgba(255, 255, 255, 0.1) 9px
+  );
   transform: translateX(-50%);
   animation: splash-progress-glow 1.8s ease-in-out infinite;
+}
+
+.splash__progress::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  z-index: 1;
+  width: 7px;
+  height: 7px;
+  margin-left: -3.5px;
+  border-radius: 50%;
+  background: #fff8e1;
+  box-shadow: 0 0 8px 2px rgba(244, 195, 0, 0.85), 0 0 14px 4px rgba(193, 18, 31, 0.4);
+  opacity: 0;
+  transform: translateY(-50%);
+  animation: splash-progress-fill-head 2500ms cubic-bezier(0.2, 0.82, 0.2, 1) forwards;
 }
 
 .splash__progress-bar {
   position: relative;
   display: block;
-  width: 100%;
+  width: 0%;
   height: 100%;
   overflow: hidden;
   border-radius: inherit;
-  background: linear-gradient(90deg, #c1121f 0%, #f4c300 50%, #c1121f 100%);
+  background: linear-gradient(90deg, #f4c300 0%, #c1121f 45%, #1a5fa8 100%);
   background-size: 200% 100%;
-  transform: scaleX(0);
-  transform-origin: left center;
   animation:
     splash-progress-fill 2500ms cubic-bezier(0.2, 0.82, 0.2, 1) forwards,
     splash-progress-flow 1.6s linear infinite;
@@ -311,7 +331,21 @@ html:not(.js-enabled) .splash {
 
 @keyframes splash-progress-fill {
   to {
-    transform: scaleX(1);
+    width: 100%;
+  }
+}
+
+@keyframes splash-progress-fill-head {
+  0% {
+    left: 0%;
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  100% {
+    left: 97%;
+    opacity: 1;
   }
 }
 
@@ -7361,8 +7395,16 @@ body.timed-video-popup-open {
   .splash__brand {
     animation: none;
     opacity: 1;
+    clip-path: none;
     transform: none;
     filter: none;
+  }
+
+  .splash__brand::before,
+  .splash__brand::after {
+    animation: none;
+    opacity: 1;
+    transform: none;
   }
 
   .splash__brand-kicker {
@@ -7375,6 +7417,11 @@ body.timed-video-popup-open {
     filter: drop-shadow(0 8px 22px rgba(0, 0, 0, 0.46));
   }
 
+  .splash__overlay::before {
+    animation: none;
+    opacity: 0;
+  }
+
   .site-nav__event-name {
     animation: none;
     transform: none;
@@ -7383,6 +7430,11 @@ body.timed-video-popup-open {
   .splash__progress {
     animation: none;
     box-shadow: 0 0 12px rgba(244, 195, 0, 0.12);
+  }
+
+  .splash__progress::after {
+    animation: none;
+    opacity: 0;
   }
 
   .splash__progress-bar {
