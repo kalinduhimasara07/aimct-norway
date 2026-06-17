@@ -1,0 +1,112 @@
+[
+ {
+    "name": "12th AIMCT Conference",
+    "desc": "12th Asset Integrity Maintenance Corrossion & Turnaround Conference",
+    "place": "Qatar",
+    "date": "28th & 29th September, 2026",
+    "src": "https://cogentsolutions.ae/views/img/explore-logos/AIMQatar.webp",
+    "alt": "12th Asset Integrity Maintenance Corrossion & Turnaround Conference - Qatar",
+    "url": "https://cogentsolutions.ae/events/upcoming-physical-events/12th-aimct-conference-qatar/",
+    "flagSrc": "https://cogentsolutions.ae/views/img/logos/qatar-flag.jpg",
+    "flagAlt": "Flag of Qatar"
+  },
+  {
+    "name": "11th AIMCT Conference",
+    "desc": "11th Asset Integrity Maintenance Corrossion & Turnaround Conference",
+    "place": "KSA",
+    "date": "20th January, 2027",
+    "src": "https://cogentsolutions.ae/views/img/explore-logos/AIMSaudi.webp",
+    "alt": "11th Asset Integrity Maintenance Corrossion & Turnaround Conference - KSA",
+    "url": "https://cogentsolutions.ae/events/upcoming-physical-events/11th-aimct-conference-saudi/",
+    "flagSrc": "",
+    "flagAlt": ""
+  },
+  {
+    "name": "10th AIM Conference",
+    "desc": "10th Asset Integrity Management Conference",
+    "place": "Nigeria",
+    "date": "25th Feb, 2026",
+    "src": "https://cogentsolutions.ae/views/img/explore-logos/aim-nigeria.png",
+    "alt": "10th Asset Integrity Management Conference - Nigeria",
+    "url": "https://cogentsolutions.ae/events/upcoming-physical-events/aim-nigeria/",
+    "flagSrc": "https://cogentsolutions.ae/views/img/logos/nigeria-flag.webp",
+    "flagAlt": "Flag of Nigeria"
+  },
+  {
+    "name": "9th AIM Conference",
+    "desc": "9th Asset Integrity Management - FRP & CUI Innovations Conference",
+    "place": "KSA",
+    "date": "1st & 2nd October, 2025",
+    "src": "https://cogentsolutions.ae/views/aim-ksa-frp-cui.png",
+    "alt": "9th Asset Integrity Management - FRP & CUI Innovations Conference - KSA",
+    "url": "https://cogentsolutions.ae/events/upcoming-physical-events/cui-frp-ksa/",
+    "flagSrc": "",
+    "flagAlt": ""
+  },
+  {
+    "name": "8th AIM Conference",
+    "desc": "8th Asset Integrity Management Conference",
+    "place": "Qatar",
+    "date": "20th & 21st May, 2025",
+    "src": "https://cogentsolutions.ae/views/img/logos/asset-integrity-mgmt.png",
+    "alt": "8th Asset Integrity Management Conference - Qatar",
+    "url": "https://cogentsolutions.ae/events/upcoming-physical-events/8th-asset-integrity-management/",
+    "flagSrc": "https://cogentsolutions.ae/views/img/logos/qatar-flag.jpg",
+    "flagAlt": "Flag of Qatar"
+  },
+  {
+    "name": "7th AIM Conference",
+    "desc": "7th Asset Integrity Management Conference",
+    "place": "KSA",
+    "date": "24th & 25th February 2025",
+    "src": "https://cogentsolutions.ae/views/img/logos/AIM__7th__edition__KSA.png",
+    "alt": "7th Asset Integrity Management Conference - KSA",
+    "url": "https://cogentsolutions.ae/events/upcoming-physical-events/7th-asset-integrity-management/",
+    "flagSrc": "",
+    "flagAlt": ""
+  },
+  {
+    "name": "5th AIM Conference",
+    "desc": "5th Asset Integrity Management Conference",
+    "place": "Qatar",
+    "date": "21st and 22nd May, 2024",
+    "src": "https://cogentsolutions.ae/views/img/logos/AIM-qatar-edition.png",
+    "alt": "5th Asset Integrity Management Conference - Qatar",
+    "url": "https://cogentsolutions.ae/events/upcoming-physical-events/5th-asset-integrity-management",
+    "flagSrc": "https://cogentsolutions.ae/views/img/logos/qatar-flag.jpg",
+    "flagAlt": "Flag of Qatar"
+  },
+  {
+    "name": "3rd AIM Conference",
+    "desc": "3rd Asset Integrity Management Conference",
+    "place": "Oman",
+    "date": "29th & 30th August, 2023",
+    "src": "https://cogentsolutions.ae/views/img/explore-logos/aimoman.jpg",
+    "alt": "3rd Asset Integrity Management Conference - Oman",
+    "url": "https://cogentsolutions.ae/events/past-physical-events/3nd-asset-integrity-management/",
+    "flagSrc": "https://cogentsolutions.ae/views/img/logos/oman-flag.png",
+    "flagAlt": "Flag of Oman"
+  },
+  {
+    "name": "2nd AIM Conference",
+    "desc": "2nd Asset Integrity Management Conference",
+    "place": "Qatar",
+    "date": "May 23rd - 24th, 2023",
+    "src": "https://cogentsolutions.ae/views/img/explore-logos/aimqatar.png",
+    "alt": "2nd Asset Integrity Management Conference - Qatar",
+    "url": "https://aimsummit.csevents.ae/2nd-asset-integrity-management-conference-qatar/",
+    "flagSrc": "https://cogentsolutions.ae/views/img/logos/qatar-flag.jpg",
+    "flagAlt": "Flag of Qatar"
+  },
+  {
+    "name": "AIM Summit",
+    "desc": "Asset Integrity Management Summit",
+    "place": "Oman",
+    "date": "August 30th, 2022",
+    "src": "https://cogentsolutions.ae/views/img/explore-logos/asset-integrity-management-summit.jpg",
+    "alt": "Asset Integrity Management Summit - Oman",
+    "url": "https://aimomansummit.com/",
+    "flagSrc": "https://cogentsolutions.ae/views/img/logos/oman-flag.png",
+    "flagAlt": "Flag of Oman"
+  }
+]

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cogentsolutions.ae/events/upcoming-physical-events/aimct-angola/sitemap.xml

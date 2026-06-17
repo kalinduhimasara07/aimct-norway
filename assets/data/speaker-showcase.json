@@ -1,0 +1,283 @@
+{
+  "title": "Featured Speakers",
+  "intro": "",
+  "sections": [
+    {
+      "id": "technical-committee-members",
+      "label": "Technical Committee Members",
+      "style": "technical",
+      "description": "",
+      "speakers": [
+        {
+          "id": "tcm-01",
+          "name": "Mrs. Ana Miala",
+          "designation": "Member Of The Board",
+          "company": "Angolan National Agency For Petroleum, Gas And Biofuels",
+          "image": "./assets/images/speakers/sp-16.webp",
+          "bio": "Holds a degree in Petroleum Engineering from the University of Tulsa – USA, with over 22 years of experience in the oil industry, having held the following positions: <br><br> Director of Production at the National Agency for Oil, Gas, and Biofuels;<br><br>Member of the Board of OPS – Petroleum Production Services, Limited – Sonangol;<br><br>Head of the Production Department – Production Division of Sonangol E.P.",
+          "logo": "https://cogentsolutions.ae/events/upcoming-physical-events/aimct-angola/assets/logos/Sponsors/sp-11.webp",
+          "logoAlt": ""
+        },
+        {
+          "id": "tcm-02",
+          "name": "Mr. Luís Correia Neves",
+          "designation": "Advisor to the Executive Committee of Sonangol Trading and Shipping",
+          "company": "Sonangol",
+          "image": "./assets/images/speakers/sp-08.webp",
+          "bio": "",
+          "logo": "./assets/logos/Sponsors/sp-16.webp",
+          "logoAlt": ""
+        }, 
+        {
+          "id": "tcm-03",
+          "name": "Ms. Massoxi Van-Dunem Miguel ",
+          "designation": "Head – Subsurface Block Coordinator",
+          "company": "Azule Energy",
+          "image": "./assets/images/speakers/sp-15.webp",
+          "bio": "Massoxi Van-Dunem Miguel is a Senior Reservoir Engineer at Azule Energy, based in Angola. She has strong experience in offshore field development, reservoir performance analysis, and dynamic simulation, contributing to the optimization of production in mature offshore assets. Her work focuses on balancing production efficiency with long-term asset sustainability in complex deepwater environments.",
+          "logo": "https://cogentsolutions.ae/events/upcoming-physical-events/aimct-angola/assets/logos/Sponsors/sp-06.webp",
+          "logoAlt": ""
+        },
+        {
+          "id": "tcm-04",
+          "name": "Ms. Suzeth Santos",
+          "designation": "Assets Lead",
+          "company": "Azule Energy",
+          "image": "./assets/images/speakers/sp-13.webp",
+          "bio": "Suzeth Santos is an Assets Lead at Azule Energy with experience in asset management, petroleum engineering, and offshore operations. She focuses on asset performance, lifecycle management, and optimizing production in mature offshore environments.",
+          "logo": "https://cogentsolutions.ae/events/upcoming-physical-events/aimct-angola/assets/logos/Sponsors/sp-06.webp",
+          "logoAlt": ""
+        },
+        {
+          "id": "tcm-07",
+          "name": "Engr. Yetunde Asekun",
+          "designation": "Head of Corrosion for the JV Assets",
+          "company": "TotalEnergies EP Nigeria Limited",
+          "image": "./assets/images/speakers/Engr. Yetunde Asekun.webp",
+          "bio": "Engr. Yetunde Asekun is the Head of Corrosion for the JV Assets at TotalEnergies EP Nigeria Limited, with expertise in corrosion management, asset integrity, inspection support, and material degradation control across oil and gas operations.<br><br>At AIMCT 2026, she brings valuable regional insight into corrosion challenges, integrity risk management, and practical strategies for protecting aging energy infrastructure in demanding offshore and production environments.",
+          "logo": "https://cogentsolutions.ae/events/upcoming-physical-events/aimct-angola/assets/logos/Sponsors/sp-0003.webp",
+          "logoAlt": ""
+        },
+        {
+          "id": "tcm-08",
+          "name": "Mr. Taye Adegoke",
+          "designation": "Project Supervisor",
+          "company": "Midwestern Oil & Gas Company Limited",
+          "image": "./assets/images/speakers/sp-05.webp",
+          "bio": "Taye Adegoke is a COREN-registered Engineer and a corporate member of the Nigerian Society of Engineers (NSE), with 17 years of cognate experience in the oil and gas industry across Upstream and Midstream operations. He currently works as a Project Supervisor with Midwestern Oil & Gas Company Ltd. His expertise spans project and vendor management, asset integrity and strategy, construction and maintenance support, onshore and offshore fixed equipment inspection, risk-based inspection, welding and materials inspection, corrosion control, and materials selection. He also holds multiple American Petroleum Institute (API) certifications covering Pressure Vessels, Storage Tanks, Process Piping, RBI and other key project competencies.",
+          "logo": "https://cogentsolutions.ae/events/upcoming-physical-events/2nd-aim-nigeria/assets/images/updates/sponsors/s-12.webp",
+          "logoAlt": ""
+        },
+        {
+          "id": "tcm-09",
+          "name": "Mr. Paschal Chidike Odinde",
+          "designation": "Senior Corrosion & Inspection",
+          "company": "Renaissance Africa Energy Company Ltd",
+          "image": "./assets/images/speakers/Mr. Paschal Chidike Odinde.webp",
+          "bio": "Paschal Chidike Odinde is a Senior Corrosion and Inspection Engineer - Production Services at Renaissance Africa Energy Company, with strong expertise in corrosion management, inspection planning, and asset integrity assurance for oil and gas production facilities. He specializes in risk-based inspection strategies and corrosion monitoring programs that support safe, reliable, and efficient operations.",
+          "logo": "https://cogentsolutions.ae/events/upcoming-physical-events/aimct-angola/assets/logos/Sponsors/sp-0005.webp",
+          "logoAlt": ""
+        },
+        {
+          "id": "tcm-10",
+          "name": "Mr. Samuel Ojo",
+          "designation": "Asset Integrity and Reliability Manager",
+          "company": "Shell Energy, Nigeria",
+          "image": "./assets/images/speakers/sp-07.webp",
+          "bio": "Mr. Samuel Ojo is an accomplished Asset Integrity and Reliability Manager at Shell Energy, Nigeria, with extensive experience in ensuring the safe and efficient operation of critical oil and gas infrastructure. He specializes in asset integrity management, reliability engineering, and maintenance optimization across upstream and downstream operations. Samuel has led initiatives focused on extending asset life, improving operational performance, and minimizing risk in complex environments. With a strong track record in implementing integrity frameworks and driving continuous improvement, he brings valuable insights into managing aging assets and enhancing reliability in high-demand energy operations.",
+          "logo": "./assets/logos/Sponsors/sp-17.webp",
+          "logoAlt": ""
+        }
+      
+      ]
+    },
+    {
+      "id": "general-speakers",
+      "label": "Industry Leadership Speakers",
+      "style": "general",
+      "description": "",
+      "speakers": [
+        {
+          "id": "s-01",
+          "name": "Mrs. Ana Miala",
+          "designation": "Member Of The Board",
+          "company": "Angolan National Agency For Petroleum, Gas And Biofuels",
+          "image": "./assets/images/speakers/sp-16.webp",
+          "bio": "Holds a degree in Petroleum Engineering from the University of Tulsa – USA, with over 22 years of experience in the oil industry, having held the following positions: <br><br> Director of Production at the National Agency for Oil, Gas, and Biofuels;<br><br>Member of the Board of OPS – Petroleum Production Services, Limited – Sonangol;<br><br>Head of the Production Department – Production Division of Sonangol E.P.",
+          "logo": "https://cogentsolutions.ae/events/upcoming-physical-events/aimct-angola/assets/logos/Sponsors/sp-11.webp",
+          "logoAlt": ""
+        },
+        {
+          "id": "s-02",
+          "name": "Mr. Teodoro Webba",
+          "designation": "Head of Inspection Department",
+          "company": "Sonangol P&P",
+          "image": "./assets/images/speakers/avatar2.webp",
+          "bio": "Mr. Teodoro Webba is the Head of Inspection Department at Sonangol P&P, with experience in inspection planning, asset integrity support, equipment reliability, and technical assurance within oil and gas operations.<br><br>His role is closely aligned with the challenges of managing aging energy infrastructure, where effective inspection strategies are essential for identifying degradation, reducing operational risk, and supporting safe asset performance.<br><br>At AIMCT 2026, he brings valuable insight into inspection management, integrity assurance, and practical approaches to maintaining the reliability of critical oil and gas assets. ",
+          "logo": "https://cogentsolutions.ae/events/upcoming-physical-events/aimct-angola/assets/logos/Sponsors/sp-16.webp",
+          "logoAlt": ""
+        },
+        {
+          "id": "s-03",
+          "name": "Mr. Daniel Vunza",
+          "designation": "Head of Subsea Field Operations Support Department",
+          "company": "TotalEnergies",
+          "image": "./assets/images/speakers/sp-23.webp",
+          "bio": "Daniel Vunza is the Head of Subsea Field Operations Support Department and B32 Asset Integrity Manager at TotalEnergies with extensive experience in offshore asset integrity, subsea operations support, operational reliability, and lifecycle management of deepwater infrastructure. He has been actively involved in integrity assurance, maintenance optimization, and supporting operational continuity across complex offshore oil & gas assets.",
+          "logo": "https://cogentsolutions.ae/events/upcoming-physical-events/aimct-angola/assets/logos/Sponsors/sp-0003.webp",
+          "logoAlt": ""
+        },
+        {
+          "id": "s-04",
+          "name": "Engr. (Dr.) Olawale Adenuga",
+          "designation": "Group General Manager, Operations & Asset Integrity",
+          "company": "Green Energy International Ltd",
+          "image": "./assets/images/speakers/sp-21.webp",
+          "bio": "Dr. Olawale Adenuga is the Group General Manager, Operations & Asset Integrity at Green Energy International Ltd with extensive experience in offshore operations, asset integrity, maintenance strategy, and operational reliability. He has led initiatives focused on optimizing asset performance, minimizing operational risk, and improving uptime across complex oil & gas operations.",
+          "logo": "./assets/logos/Sponsors/sp-15.webp",
+          "logoAlt": ""
+        },
+        {
+          "id": "sp-05-2",
+          "name": "Mr. Fabiano Pitzer",
+          "designation": "Head Of Reliability, Asset Integrity and Automation",
+          "company": "COR – Cabinda Oil Refinery",
+          "image": "./assets/images/speakers/sp-27.webp",
+          "bio": "Mr. Fabiano Pitzer is a reliability and asset integrity leader with over 30 years of experience in the oil & gas, petrochemical, and industrial sectors. As Reliability, Asset Integrity and Automation leader at COR – Cabinda Oil Refinery, he oversees engineering, maintenance, automation, and strategic reliability initiatives to improve asset performance and operational excellence. His career includes leadership roles with global organizations such as Petrobras, Dow, Bayer, Braskem, Tronox, Danaher, and Emerson. An Electrical Engineer with postgraduate qualifications in Instrumentation, Automation and Process Control, he brings extensive expertise in maintenance strategy, project management, process automation, and industrial asset lifecycle optimization.",
+          "logo": "./assets/logos/Sponsors/sp-29.webp",
+          "logoAlt": ""
+        },
+        {
+          "id": "sp-05",
+          "name": "Engr. Yetunde Asekun",
+          "designation": "Head of Corrosion for the JV Assets",
+          "company": "TotalEnergies EP Nigeria limited",
+          "image": "./assets/images/speakers/Engr. Yetunde Asekun.webp",
+          "bio": "Engr. Yetunde Asekun is the Head of Corrosion for the JV Assets at TotalEnergies EP Nigeria Limited, with expertise in corrosion management, asset integrity, inspection support, and material degradation control across oil and gas operations.<br><br>At AIMCT 2026, she brings valuable regional insight into corrosion challenges, integrity risk management, and practical strategies for protecting aging energy infrastructure in demanding offshore and production environments.",
+          "logo": "https://cogentsolutions.ae/events/upcoming-physical-events/aimct-angola/assets/logos/Sponsors/sp-0003.webp",
+          "logoAlt": ""
+        },
+        {
+          "id": "s-06",
+          "name": "Mr. Quitumba Cahanda",
+          "designation": "Senior Corrosion Engineer",
+          "company": "Sonangol P&P",
+          "image": "./assets/images/speakers/sp-26.webp",
+          "bio": "Mr. Quitumba Cahanda is a Senior Corrosion Engineer at Sonangol P&P, with technical expertise in corrosion control, material degradation, inspection support, and asset integrity within oil and gas operations.<br><br>His experience is highly relevant to offshore and aging infrastructure environments, where corrosion management plays a critical role in ensuring safety, reliability, and long-term asset performance.<br><br>At AIMCT 2026, he brings valuable insight into corrosion challenges, monitoring strategies, and practical approaches for protecting critical energy assets in Angola’s operating environment.",
+          "logo": "https://cogentsolutions.ae/events/upcoming-physical-events/aimct-angola/assets/logos/Sponsors/sp-16.webp",
+          "logoAlt": ""
+        },
+        {
+          "id": "s-07",
+          "name": "Mr. Nelson Escovalo",
+          "designation": "Lead Petroleum Engineer - Subsurface Asset Business Delivery",
+          "company": "Chevron",
+          "image": "./assets/images/speakers/sp-22.webp",
+          "bio": "Nelson Escovalo is a Lead Petroleum Engineer at Chevron, specializing in subsurface asset performance and production optimization. He brings strong expertise in reservoir engineering, dynamic modeling, and maximizing recovery from mature offshore assets, with a focus on improving production efficiency in complex deepwater environments.",
+          "logo": "./assets/logos/Sponsors/sp-14.webp",
+          "logoAlt": ""
+        },
+        {
+          "id": "s-08",
+          "name": "Ms. Suzeth Santos",
+          "designation": "Assets Lead",
+          "company": "Azule Energy",
+          "image": "./assets/images/speakers/sp-13.webp",
+          "bio": "Suzeth Santos is an Assets Lead at Azule Energy with experience in asset management, petroleum engineering, and offshore operations. She focuses on asset performance, lifecycle management, and optimizing production in mature offshore environments.",
+          "logo": "https://cogentsolutions.ae/events/upcoming-physical-events/aimct-angola/assets/logos/Sponsors/sp-06.webp",
+          "logoAlt": ""
+        },
+        {
+          "id": "s-09",
+          "name": "Ms. Massoxi Van-Dunem Miguel ",
+          "designation": "Head – Subsurface Block Coordinator",
+          "company": "Azule Energy",
+          "image": "./assets/images/speakers/sp-15.webp",
+          "bio": "Massoxi Van-Dunem Miguel is a Senior Reservoir Engineer at Azule Energy, based in Angola. She has strong experience in offshore field development, reservoir performance analysis, and dynamic simulation, contributing to the optimization of production in mature offshore assets. Her work focuses on balancing production efficiency with long-term asset sustainability in complex deepwater environments.",
+          "logo": "https://cogentsolutions.ae/events/upcoming-physical-events/aimct-angola/assets/logos/Sponsors/sp-06.webp",
+          "logoAlt": ""
+        },
+        {
+          "id": "s-10",
+          "name": "Mr. Antonio Andre Chivanga Barros",
+          "designation": "PhD, Professor and Consultant",
+          "company": "Sonangol Research and Development Center (CPD)",
+          "image": "./assets/images/speakers/sp-18.webp",
+          "bio": "Antonio Andre Chivanga Barros is a PhD-qualified Professor and Consultant at the Sonangol Research and Development Center (CPD). With extensive experience in petroleum research and offshore engineering, he specializes in asset integrity, corrosion management, and advanced technical solutions for Angola’s oil and gas sector. He plays a key role in bridging academic research with real-world industry applications, supporting the development and optimization of complex offshore systems.",
+          "logo": "./assets/logos/Sponsors/sp-16.webp",
+          "logoAlt": ""
+        },
+        {
+          "id": "s-11",
+          "name": "Mr. Antonio Duilio Pedro",
+          "designation": "Lead Offshore Installation Manager",
+          "company": "TotalEnergies",
+          "image": "./assets/images/speakers/sp-25.webp",
+          "bio": "Antonio Duilio Pedro, MSc, MIET is an experienced Offshore Installation Manager (OIM) / RSES at TotalEnergies, with expertise in offshore operations, installation safety, emergency response, and high-risk maintenance execution. His role focuses on ensuring safe, reliable, and compliant offshore operations while managing operational risks, workforce coordination, and asset performance in challenging offshore environments.",
+          "logo": "https://cogentsolutions.ae/events/upcoming-physical-events/aimct-angola/assets/logos/Sponsors/sp-0003.webp",
+          "logoAlt": ""
+        },
+        {
+          "id": "s-11-2",
+          "name": "Mr. Luís Barros Minga Nzau",
+          "designation": "Lead Asset Reliability & Integrity Engineer",
+          "company": "Cabinda Oil Refinery",
+          "image": "./assets/images/speakers/avatar2.webp",
+          "bio": "Mr. Luís Barros Minga Nzau is a highly accomplished Asset Reliability and Integrity Engineer with over 25 years of experience in the oil and gas industry, specializing in rotating equipment, maintenance engineering, commissioning, and asset integrity management. Currently serving at COR – Cabinda Oil Refinery, he leads reliability and integrity initiatives, developing RCM programs, maintenance strategies, and condition monitoring solutions that enhance operational performance and asset availability. His career includes extensive experience with Chevron Cabgoc and other industry leaders, where he managed critical offshore and onshore assets. With expertise in API, ASME, and ISO standards, he is passionate about engineering excellence, operational reliability, and mentoring the next generation of maintenance professionals.",
+          "logo": "./assets/logos/Sponsors/sp-29.webp",
+          "logoAlt": ""
+        },
+        {
+          "id": "s-12",
+          "name": "Ms. Cíntia Lima Dos Santos",
+          "designation": "IMR Lead",
+          "company": "Oceaneering",
+          "image": "./assets/images/speakers/sp-19.webp",
+          "bio": "Cíntia is the IMR Lead for Oceaneering in Africa, based in Luanda, Angola, with a background in Chemical Engineering and Energy specialization. She has extensive experience in subsea inspection, integrity management, and offshore IMR project delivery across complex offshore operations.<br><br>Having started her career offshore as a Subsea Engineer, she developed strong operational and project execution expertise before transitioning into leadership roles focused on improving delivery efficiency, digitalization, operational processes, and integrated integrity solutions.<br><br>She currently leads IMR activities supporting offshore asset integrity, planned maintenance, execution management, and client-focused delivery strategies. <br><br>Her focus is on delivering practical, efficient, and data-driven integrity solutions aligned with client operational challenges and asset life-extension objectives.",
+          "logo": "https://cogentsolutions.ae/events/upcoming-physical-events/aimct-angola/assets/logos/Sponsors/sp-07.webp",
+          "logoAlt": ""
+        },
+        {
+          "id": "s-13",
+          "name": "Mr. Colin Bateman",
+          "designation": "Director of Technical Sales",
+          "company": "IGS",
+          "image": "./assets/images/speakers/sp-24.webp",
+          "bio": "Colin graduated in 1996 with a Masters degree in Mechanical Engineering from Newcastle University and has 25+ years of experience in developing and specifying protective barrier solutions for mission critical assets.  Working in the Energy Sector, he currently supports asset owners in Europe, the Middle East and Africa, helping them to manage and mitigate their erosion and corrosion challenges through the utilization of robust surface protection technologies, developing preventative maintenance programs.",
+          "logo": "https://cogentsolutions.ae/events/upcoming-physical-events/aimct-angola/assets/logos/Sponsors/sp-12.webp",
+          "logoAlt": ""
+        },
+        {
+          "id": "s-14",
+          "name": "Ms. Kristen Fraser",
+          "designation": "Software Operations Manager",
+          "company": "Oceaneering",
+          "image": "./assets/images/speakers/sp-20.webp",
+          "bio": "Kristen is a Software Operations Manager with a broad background of integrity engineering and technology implementations, focused on Integrity Engineering of pressure systems, both below and above sea-level. With a strong focus on supporting organizations to modernize operations and deliver practical business value, Kristen works closely with clients to bridge the gap between complex engineering challenges and scalable technology solutions.  She has a keen interest in understanding how emerging technologies can improve safety, efficiency, collaboration, and long-term resilience in the sector. ",
+          "logo": "https://cogentsolutions.ae/events/upcoming-physical-events/aimct-angola/assets/logos/Sponsors/sp-07.webp",
+          "logoAlt": ""
+        },
+        {
+          "id": "s-15",
+          "name": "Mr. Osvaldo Tchissola, MSc, AMEI",
+          "designation": "Lead Process Engineer",
+          "company": "Angola LNG",
+          "image": "./assets/images/speakers/avatar2.webp",
+          "bio": "Mr. Osvaldo Tchissola is a Process Engineer with experience in process performance, operational efficiency, safety, and reliability within energy operations.<br><br>At AIMCT 2026, he brings valuable insight into process engineering, production continuity, and managing operational risks across critical energy infrastructure.",
+          "logo": "./assets/logos/Sponsors/sp-28.webp",
+          "logoAlt": ""
+        },
+        {
+          "id": "s-17",
+          "name": "Mr. Antonio Cabuço",
+          "designation": "Head – Subsea & Pipeline Management",
+          "company": "Azule Energy",
+          "image": "./assets/images/speakers/avatar2.webp",
+          "bio": "Mr. Antonio Cabuço is Head – Subsea & Pipeline Management at Azule Energy, with experience in overseeing subsea infrastructure, pipeline systems, inspection planning, operational integrity, and asset reliability within offshore energy operations.<br><br>At AIMCT 2026, he brings valuable insight into subsea and pipeline integrity, aging infrastructure challenges, inspection strategies, and maintaining safe, reliable operations across critical offshore assets.",
+          "logo": "./assets/logos/Sponsors/sp-06-260.webp",
+          "logoAlt": ""
+        }
+      ]
+    }
+  ]
+}

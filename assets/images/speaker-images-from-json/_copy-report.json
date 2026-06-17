@@ -1,0 +1,266 @@
+[
+  {
+    "name": "Aiyad Gannan",
+    "status": "copied",
+    "source": "./image/speakers/AIyad_gannan.png",
+    "output": "01-aiyad-gannan.webp"
+  },
+  {
+    "name": "Chloe Tan",
+    "status": "copied",
+    "source": "./image/speakers/Hamza_alam.png",
+    "output": "02-chloe-tan.png"
+  },
+  {
+    "name": "Daniel Cruz",
+    "status": "copied",
+    "source": "./image/speakers/mohammed_alghazal.png",
+    "output": "03-daniel-cruz.png"
+  },
+  {
+    "name": "Dr Hanan Farhat",
+    "status": "copied",
+    "source": "./image/speakers/tsp-2.webp",
+    "output": "04-dr-hanan-farhat.webp"
+  },
+  {
+    "name": "Dr. Aiyad Gannan",
+    "status": "copied",
+    "source": "./image/speakers/AIyad_gannan.png",
+    "output": "05-dr-aiyad-gannan.png"
+  },
+  {
+    "name": "Dr. Hanan Farhat (PhD)",
+    "status": "copied",
+    "source": "./image/speakers/tsp-2.webp",
+    "output": "06-dr-hanan-farhat-phd.webp"
+  },
+  {
+    "name": "Dr. Liaqat Amin Satti",
+    "status": "copied",
+    "source": "./image/speakers/tsp-4.webp",
+    "output": "07-dr-liaqat-amin-satti.webp"
+  },
+  {
+    "name": "Dr. Mohammed Alghazal",
+    "status": "copied",
+    "source": "./image/speakers/mohammed_alghazal.png",
+    "output": "08-dr-mohammed-alghazal.webp"
+  },
+  {
+    "name": "Dr.ir. Zeeshan F. Lodhi",
+    "status": "copied",
+    "source": "./image/speakers/tsp-3.webp",
+    "output": "09-dr-ir-zeeshan-f-lodhi.webp"
+  },
+  {
+    "name": "Emily Davis",
+    "status": "copied",
+    "source": "./image/speakers/Shaiq_Bashir.png",
+    "output": "10-emily-davis.png"
+  },
+  {
+    "name": "Eng. Ibrahim Hachicha",
+    "status": "copied",
+    "source": "./image/speakers/28.webp",
+    "output": "11-eng-ibrahim-hachicha.webp"
+  },
+  {
+    "name": "G. Ghulam",
+    "status": "copied",
+    "source": "./image/speakers/Taner.png",
+    "output": "12-g-ghulam.png"
+  },
+  {
+    "name": "Jordan Lee",
+    "status": "copied",
+    "source": "./image/speakers/mustafa_2.png",
+    "output": "13-jordan-lee.png"
+  },
+  {
+    "name": "Khalid Rahil Sheltami",
+    "status": "copied",
+    "source": "./image/update/Tech Comm/khalid-removebg-preview.png",
+    "output": "14-khalid-rahil-sheltami.webp"
+  },
+  {
+    "name": "Mike Johnson",
+    "status": "copied",
+    "source": "./image/speakers/Uboud.png",
+    "output": "15-mike-johnson.png"
+  },
+  {
+    "name": "Mr Adel Elhasaeri",
+    "status": "copied",
+    "source": "./image/speakers/tsp-1.webp",
+    "output": "16-mr-adel-elhasaeri.webp"
+  },
+  {
+    "name": "Mr. Abdulwahab Ibrahim",
+    "status": "copied",
+    "source": "./image/speakers/spS-3.webp",
+    "output": "17-mr-abdulwahab-ibrahim.webp"
+  },
+  {
+    "name": "Mr. Adel Elhsaeri",
+    "status": "copied",
+    "source": "./image/speakers/tsp-1.webp",
+    "output": "18-mr-adel-elhsaeri.webp"
+  },
+  {
+    "name": "Mr. Fahad Mudhaeq",
+    "status": "copied",
+    "source": "./image/update/Tech Comm/fahad-removebg-preview.png",
+    "output": "19-mr-fahad-mudhaeq.webp"
+  },
+  {
+    "name": "Mr. Ghulam Mustafa",
+    "status": "copied",
+    "source": "./image/update/Speakers/Mr._Ghulam__1_-removebg-preview.png",
+    "output": "20-mr-ghulam-mustafa.webp"
+  },
+  {
+    "name": "Mr. Hamza Alam",
+    "status": "copied",
+    "source": "./image/speakers/Hamza_alam.png",
+    "output": "21-mr-hamza-alam.webp"
+  },
+  {
+    "name": "Mr. Hesham Khalifah Al-Subait",
+    "status": "copied",
+    "source": "./image/speakers/sp-10.webp",
+    "output": "22-mr-hesham-khalifah-al-subait.webp"
+  },
+  {
+    "name": "Mr. Loorentz Widjaya",
+    "status": "copied",
+    "source": "./image/update/Speakers/22-removebg-preview.png",
+    "output": "23-mr-loorentz-widjaya.webp"
+  },
+  {
+    "name": "Mr. Mohammed A. Albrahimi",
+    "status": "copied",
+    "source": "./image/speakers/sp-09.webp",
+    "output": "24-mr-mohammed-a-albrahimi.webp"
+  },
+  {
+    "name": "Mr. Mustafa Aziz",
+    "status": "copied",
+    "source": "./image/speakers/mustafa_2.png",
+    "output": "25-mr-mustafa-aziz.webp"
+  },
+  {
+    "name": "Mr. Nikhil Kannan",
+    "status": "copied",
+    "source": "./image/speakers/spS-4.webp",
+    "output": "26-mr-nikhil-kannan.webp"
+  },
+  {
+    "name": "Mr. Partha Sanyal",
+    "status": "copied",
+    "source": "./image/speakers/Partha_sanyal.png",
+    "output": "27-mr-partha-sanyal.webp"
+  },
+  {
+    "name": "Mr. Sérgio Vidal",
+    "status": "copied",
+    "source": "./image/speakers/sp-10.webp",
+    "output": "28-mr-sergio-vidal.webp"
+  },
+  {
+    "name": "Mr. Shaiq Bashir",
+    "status": "copied",
+    "source": "./image/speakers/Shaiq_Bashir.png",
+    "output": "29-mr-shaiq-bashir.webp"
+  },
+  {
+    "name": "Mr. Taner Serter",
+    "status": "copied",
+    "source": "./image/speakers/Taner.png",
+    "output": "30-mr-taner-serter.webp"
+  },
+  {
+    "name": "Mr. Uboud Al-Ghamdi - EMBA",
+    "status": "copied",
+    "source": "./image/speakers/Uboud.png",
+    "output": "31-mr-uboud-al-ghamdi-emba.webp"
+  },
+  {
+    "name": "Mr. Ziyad Abulhamayel",
+    "status": "copied",
+    "source": "./image/speakers/sp-08.webp",
+    "output": "32-mr-ziyad-abulhamayel.webp"
+  },
+  {
+    "name": "Sarah Williams",
+    "status": "copied",
+    "source": "./image/speakers/Partha_sanyal.png",
+    "output": "33-sarah-williams.png"
+  },
+  {
+    "name": "Mr. Ir. Ts. Mazri Mohd Ali",
+    "status": "copied",
+    "source": "./image/speakers/ks-01.webp",
+    "output": "ks-01.webp"
+  },
+  {
+    "name": "Mr. Perrie Roy Paul Anin",
+    "status": "copied",
+    "source": "./image/speakers/perrie.webp",
+    "output": "perrie.webp"
+  },
+  {
+    "name": "Mr. Narayanan Chidambaram",
+    "status": "copied",
+    "source": "./image/speakers/narayanan.webp",
+    "output": "narayanan.webp"
+  },
+  {
+    "name": "Mr. Anil Kumar Malik, PMP",
+    "status": "copied",
+    "source": "./image/speakers/anil.webp",
+    "output": "anil.webp"
+  },
+  {
+    "name": "Mr. Srikanth V Sura, CMRP",
+    "status": "copied",
+    "source": "./image/speakers/srikanth.webp",
+    "output": "srikanth.webp"
+  },
+  {
+    "name": "Ts. Sharifah Zaida Nurlisha Syed Ibrahim",
+    "status": "copied",
+    "source": "./image/speakers/sharifah.webp",
+    "output": "sharifah.webp"
+  },
+  {
+    "name": "Dr. Ambrose G. Corray",
+    "status": "copied",
+    "source": "./image/speakers/ambrose.webp",
+    "output": "ambrose.webp"
+  },
+  {
+    "name": "Mr. Ir. Ts. Zulkifli Zainon, CEng MIMechE, ACPE, P.Eng. P.Tech.",
+    "status": "copied",
+    "source": "./image/speakers/zulkifli.png",
+    "output": "zulkifli.webp"
+  },
+  {
+    "name": "Mr. Khairul Azizat Johari",
+    "status": "copied",
+    "source": "./image/speakers/khairul.webp",
+    "output": "khairul.webp"
+  },
+  {
+    "name": "Mr. Tengku Shahru",
+    "status": "copied",
+    "source": "./image/speakers/tengku.webp",
+    "output": "tengku.webp"
+  },
+  {
+    "name": "Mr. Victor Festival Fredoline Sikain",
+    "status": "copied",
+    "source": "./image/speakers/victor.webp",
+    "output": "victor.webp"
+  }
+]
