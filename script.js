@@ -225,6 +225,21 @@ document.documentElement.classList.add("js-enabled");
 
   initSiteNav();
 
+  const initHeroVideoPlayback = () => {
+    const heroVideo = document.querySelector(".hero__video");
+
+    if (!heroVideo) {
+      return;
+    }
+
+    const setPlaybackRate = () => {
+      heroVideo.playbackRate = 0.80;
+    };
+
+    setPlaybackRate();
+    heroVideo.addEventListener("loadedmetadata", setPlaybackRate, { once: true });
+  };
+
   const initSplashScreen = (reduceMotion) => {
     const splash = document.querySelector("[data-splash]");
     const splashVideo = splash ? splash.querySelector(".splash__video") : null;
@@ -557,6 +572,7 @@ document.documentElement.classList.add("js-enabled");
 
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   initSplashScreen(reduceMotion);
+  initHeroVideoPlayback();
   initHeroChipCycle(reduceMotion);
   initTimedVideoPopup();
   initOverviewVideoPopup();
@@ -795,6 +811,7 @@ document.documentElement.classList.add("js-enabled");
     const canAnimate = hasGsap && !reduceMotion && hasOverflowEvents;
     const isMobileViewport = () => mobileViewportQuery.matches;
     const mobileTrackShift = -(100 / cards.length);
+    const carouselEase = "sine.inOut";
     let visibleCoverIndices = cards.map((_, index) => index % events.length);
     let isAnimating = false;
 
@@ -847,10 +864,10 @@ document.documentElement.classList.add("js-enabled");
       }
 
       isAnimating = true;
-      const travelDistance = normalizedDirection > 0 ? -18 : 18;
+      const travelDistance = normalizedDirection > 0 ? -16 : 16;
 
       const timeline = gsap.timeline({
-        defaults: { ease: "power2.inOut" },
+        defaults: { ease: carouselEase },
         onComplete: () => {
           visibleCoverIndices = nextVisible;
           isAnimating = false;
@@ -863,8 +880,8 @@ document.documentElement.classList.add("js-enabled");
             cardsTrack,
             {
               xPercent: mobileTrackShift * normalizedDirection,
-              duration: 0.78,
-              ease: "power3.inOut"
+              duration: 1.08,
+              ease: carouselEase
             },
             0
           )
@@ -883,8 +900,8 @@ document.documentElement.classList.add("js-enabled");
           {
             x: travelDistance,
             autoAlpha: 0.35,
-            duration: 0.42,
-            stagger: 0.05
+            duration: 0.56,
+            stagger: 0.065
           },
           0
         )
@@ -897,10 +914,10 @@ document.documentElement.classList.add("js-enabled");
           {
             x: 0,
             autoAlpha: 1,
-            duration: 0.58,
-            stagger: 0.05
+            duration: 0.78,
+            stagger: 0.065
           },
-          ">-0.06"
+          ">-0.12"
         );
     };
 
@@ -1684,11 +1701,6 @@ document.documentElement.classList.add("js-enabled");
     const heroTimeline = gsap.timeline({ defaults: { ease: "power3.out" } });
 
     heroTimeline
-      .from(".hero__video", {
-        scale: 1.12,
-        duration: 1.8,
-        ease: "power2.out"
-      })
       .from(
         ".hero__eyebrow-meta",
         {
@@ -1732,17 +1744,6 @@ document.documentElement.classList.add("js-enabled");
   if (!ScrollTrigger) {
     return;
   }
-
-  gsap.to(".hero__video", {
-    yPercent: 8,
-    ease: "none",
-    scrollTrigger: {
-      trigger: ".hero",
-      start: "top top",
-      end: "bottom top",
-      scrub: 1
-    }
-  });
 
   gsap.from([".global-events__kicker", ".global-events__title", ".global-events__intro"], {
     y: 38,
