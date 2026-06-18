@@ -512,6 +512,14 @@ main > section + section {
   margin-top: 0;
 }
 
+.overview-image + .series-sponsors {
+  margin-top: 0;
+}
+
+.overview-image + .series-sponsors.section {
+  padding-top: clamp(1rem, 2.2vw, 1.8rem);
+}
+
 .site-nav {
   position: fixed;
   top: 0;
@@ -551,7 +559,7 @@ main > section + section {
   width: 100%;
   min-height: clamp(116px, 10.4vw, 160px);
   display: grid;
-  grid-template-columns: minmax(210px, 0.78fr) minmax(310px, 1.24fr) minmax(390px, 1.24fr) minmax(180px, 0.66fr);
+  grid-template-columns: minmax(210px, 0.78fr) minmax(310px, 1.24fr) minmax(180px, auto);
   align-items: center;
   overflow: hidden;
   background:
@@ -1004,6 +1012,7 @@ main > section + section {
 .site-nav__actions {
   display: grid;
   align-content: center;
+  justify-content: end;
   gap: 0.64rem;
 }
 
@@ -1714,6 +1723,7 @@ main > section + section {
   .overview::after,
   .overview__kicker,
   .overview__editorial,
+  .overview__editorial::before,
   .overview__editorial::after,
   .overview__heading::before,
   .overview__highlights li::before {
@@ -2108,7 +2118,7 @@ main > section + section {
 .supporting-partners {
   position: relative;
   overflow: hidden;
-  background: #0f1115;
+  background: var(--color-deep);
 }
 
 #series-supporting-partners {
@@ -2184,6 +2194,16 @@ main > section + section {
   line-height: 1.12;
   color: var(--color-bg);
   text-shadow: 0 14px 30px rgba(0, 0, 0, 0.34);
+}
+
+#angola-gold-sponsors-title,
+#angola-exhibitor-title,
+#angola-media-partner-title {
+  width: 100%;
+  max-width: none;
+  margin: clamp(1.2rem, 2.6vw, 2rem) auto 0.35rem !important;
+  text-align: center !important;
+  justify-self: center;
 }
 
 .supporting-partners__logos {
@@ -2908,11 +2928,11 @@ main > section + section {
 .integrity-moment__title {
   grid-column: 1;
   margin: 0;
-  max-width: 12ch;
+  max-width: min(100%, 33ch);
   font-size: clamp(1.68rem, 2.9vw, 2.75rem);
   line-height: 1.02;
   color: rgba(255, 255, 255, 0.98);
-  text-wrap: balance;
+  white-space: nowrap;
 }
 
 .integrity-moment__intro {
@@ -3034,15 +3054,15 @@ main > section + section {
   height: clamp(390px, 42vw, 580px);
   align-self: start;
   justify-self: end;
-  width: min(100%, 520px);
+  width: min(100%, 620px);
   overflow: hidden;
-  border-radius: 24px;
-  background: rgba(245, 247, 250, 0.05);
-  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.36);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .integrity-moment__visual::after {
-  content: "";
+  content: none;
   position: absolute;
   inset: 0;
   z-index: 1;
@@ -3063,6 +3083,17 @@ main > section + section {
     );
 }
 
+.integrity-moment__visual::before {
+  content: none;
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, #0d1c2a 0%, rgba(13, 28, 42, 0) 18%, rgba(13, 28, 42, 0) 82%, #0d1c2a 100%),
+    linear-gradient(180deg, #0d1c2a 0%, rgba(13, 28, 42, 0) 14%, rgba(13, 28, 42, 0) 84%, #0d1c2a 100%);
+}
+
 .integrity-moment__visual img {
   position: relative;
   z-index: 0;
@@ -3070,7 +3101,11 @@ main > section + section {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  filter: grayscale(58%) brightness(0.64) contrast(1.08);
+  opacity: 0.82;
+  mix-blend-mode: screen;
+  filter: grayscale(100%) brightness(0.9) contrast(1.22);
+  -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 74%, transparent 100%);
+  mask-image: linear-gradient(90deg, #000 0%, #000 74%, transparent 100%);
 }
 
 .overview {
@@ -3085,7 +3120,7 @@ main > section + section {
 }
 
 .overview::before {
-  content: "";
+  content: none;
   position: absolute;
   inset: 0;
   z-index: -2;
@@ -3100,11 +3135,10 @@ main > section + section {
   background-position: 0 0, -70% 0;
   opacity: 0.72;
   mask-image: linear-gradient(180deg, transparent 0, rgba(0, 0, 0, 0.25) clamp(3rem, 6vw, 5rem), #000 clamp(7rem, 14vw, 12rem));
-  animation: overview-field-shift 14s ease-in-out infinite;
 }
 
 .overview::after {
-  content: "";
+  content: none;
   position: absolute;
   inset: auto 0 0;
   z-index: -1;
@@ -3112,7 +3146,6 @@ main > section + section {
   background: linear-gradient(180deg, transparent 0%, rgba(193, 18, 31, 0.18) 52%, rgba(26, 95, 168, 0.12) 100%);
   clip-path: polygon(0 34%, 100% 0, 100% 100%, 0% 100%);
   opacity: 0.75;
-  animation: overview-red-swell 7s ease-in-out infinite;
 }
 
 .overview.section {
@@ -3149,11 +3182,11 @@ main > section + section {
   background-clip: text;
   color: transparent;
   box-shadow: inset 0 0 18px rgba(26, 95, 168, 0.14), 0 14px 34px rgba(0, 0, 0, 0.16);
-  animation: hero-kicker-shimmer 5.5s linear infinite;
 }
 
 .overview__editorial {
   position: relative;
+  overflow: hidden;
   display: grid;
   grid-template-columns: minmax(0, 1.04fr) minmax(0, 1fr);
   gap: clamp(1.6rem, 3.5vw, 3.25rem);
@@ -3163,13 +3196,33 @@ main > section + section {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.045));
   box-shadow: 0 28px 70px rgba(0, 0, 0, 0.32);
   backdrop-filter: blur(10px);
-  animation: overview-panel-float 7.5s ease-in-out infinite;
+}
+
+.overview__editorial::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(
+      115deg,
+      rgba(255, 255, 255, 0.045) 0 1px,
+      transparent 1px 42px
+    ),
+    linear-gradient(90deg, transparent, rgba(26, 95, 168, 0.16), transparent),
+    linear-gradient(180deg, transparent 0%, rgba(193, 18, 31, 0.13) 72%, rgba(26, 95, 168, 0.08) 100%);
+  background-size: auto, 58% 100%, 100% 100%;
+  background-position: 0 0, -70% 0, 0 0;
+  opacity: 0.74;
+  animation: overview-field-shift 14s ease-in-out infinite;
 }
 
 .overview__editorial::after {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 0;
   pointer-events: none;
   background: linear-gradient(115deg, transparent 0%, rgba(255, 255, 255, 0.12) 46%, transparent 62%);
   transform: translateX(-115%);
@@ -3178,6 +3231,7 @@ main > section + section {
 
 .overview__heading {
   position: relative;
+  z-index: 1;
   display: grid;
   align-content: start;
   gap: 0;
@@ -3201,6 +3255,8 @@ main > section + section {
 }
 
 .overview__content {
+  position: relative;
+  z-index: 1;
   max-width: 740px;
   padding-left: clamp(1rem, 2vw, 1.8rem);
   text-align: justify;
@@ -3293,7 +3349,6 @@ main > section + section {
   background: var(--color-accent);
   vertical-align: middle;
   transition: transform 280ms ease, box-shadow 280ms ease, background-color 280ms ease;
-  animation: overview-bullet-pulse 2.8s ease-in-out infinite;
 }
 
 .overview__highlights li:hover::before {
@@ -3762,7 +3817,7 @@ main > section + section {
 .speaker-group {
   border: 1px solid rgba(245, 247, 250, 0.12);
   border-radius: 18px;
-  padding: clamp(0.95rem, 1.9vw, 1.4rem);
+  padding: clamp(0.95rem, 1.9vw, 1.4rem) clamp(0.95rem, 1.9vw, 1.4rem) clamp(1.45rem, 2.7vw, 2.15rem);
   display: grid;
   gap: clamp(0.9rem, 1.7vw, 1.25rem);
   box-shadow: inset 0 0 0 1px rgba(245, 247, 250, 0.035), 0 18px 42px rgba(0, 0, 0, 0.18);
@@ -3906,7 +3961,7 @@ main > section + section {
 }
 
 .speaker-card__body {
-  padding: clamp(0.78rem, 1.35vw, 1.08rem);
+  padding: clamp(0.78rem, 1.35vw, 1.08rem) clamp(0.78rem, 1.35vw, 1.08rem) clamp(1.08rem, 1.85vw, 1.52rem);
   min-height: clamp(148px, 10.8vw, 186px);
   display: flex;
   flex-direction: column;
@@ -7083,15 +7138,89 @@ body.timed-video-popup-open {
   transform: translateY(-50%);
 }
 
-/* Charcoal section mini-titles use yellow */
-.global-events__kicker,
-.legacy-highlights__kicker,
-.integrity-moment__kicker,
-.in-room__kicker,
-.attend__kicker,
+/* Shared section title label treatment */
+.speaker-showcase__kicker,
 .series-speakers__kicker,
-.series-sponsors__kicker {
-  color: var(--color-accent);
+.supporting-partners__kicker,
+.series-sponsors__kicker,
+.numbers__kicker,
+.integrity-moment__kicker,
+.strategic__kicker,
+.matter__kicker,
+.in-room__kicker,
+.topics__kicker,
+.attend__kicker,
+.testimonials__kicker {
+  position: relative;
+  display: inline-flex;
+  width: fit-content;
+  max-width: 100%;
+  align-items: center;
+  gap: 0.52rem;
+  margin-inline: 0;
+  padding: 0.48rem 0.84rem;
+  border: 1px solid rgba(26, 95, 168, 0.44);
+  border-radius: 999px;
+  background:
+    linear-gradient(135deg, rgba(26, 95, 168, 0.2), rgba(245, 247, 250, 0.045)),
+    rgba(10, 22, 40, 0.72);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 12px 28px rgba(0, 0, 0, 0.2);
+  font-family: var(--font-kicker);
+  font-size: clamp(0.76rem, 0.18vw + 0.72rem, 0.9rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: rgba(245, 247, 250, 0.92);
+}
+
+.speaker-showcase__kicker::before,
+.series-speakers__kicker::before,
+.supporting-partners__kicker::before,
+.series-sponsors__kicker::before,
+.numbers__kicker::before,
+.integrity-moment__kicker::before,
+.strategic__kicker::before,
+.matter__kicker::before,
+.in-room__kicker::before,
+.topics__kicker::before,
+.attend__kicker::before,
+.testimonials__kicker::before {
+  content: "";
+  position: static;
+  display: inline-block;
+  width: 0.42rem;
+  height: 0.42rem;
+  flex: 0 0 auto;
+  border-radius: 999px;
+  background: var(--color-accent);
+  box-shadow: 0 0 0 4px rgba(26, 95, 168, 0.14);
+  transform: none;
+}
+
+.speaker-showcase__kicker::after,
+.series-speakers__kicker::after,
+.supporting-partners__kicker::after,
+.series-sponsors__kicker::after,
+.numbers__kicker::after,
+.integrity-moment__kicker::after,
+.strategic__kicker::after,
+.matter__kicker::after,
+.in-room__kicker::after,
+.topics__kicker::after,
+.attend__kicker::after,
+.testimonials__kicker::after {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: -1px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(26, 95, 168, 0.82), transparent);
+  pointer-events: none;
 }
 
 @media (max-width: 992px) {
@@ -7387,6 +7516,7 @@ body.timed-video-popup-open {
 
   .integrity-moment__title {
     max-width: 18ch;
+    white-space: normal;
   }
 
   .integrity-moment__content-col {
@@ -7897,6 +8027,7 @@ body.timed-video-popup-open {
   .integrity-moment__title {
     max-width: 100%;
     font-size: clamp(1.42rem, 6.2vw, 2.24rem);
+    white-space: normal;
   }
 
   .integrity-moment__intro {

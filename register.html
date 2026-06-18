@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="style.css" />
   </head>
   <body class="register-page">
-    <header class="site-nav" data-site-nav>
+    <!-- <header class="site-nav" data-site-nav>
       <div class="site-nav__top">
         <a class="site-nav__brand site-nav__top-cell" href="index.html#hero" aria-label="AIMCT Norway 2026">
           <img class="site-nav__logo" src="./assets/images/logona-500.webp" srcset="./assets/images/logona-500.webp 500w, ./assets/images/logona-760.webp 760w, ./assets/images/logona.webp 1400w" sizes="(max-width: 640px) 220px, 459px" width="500" height="138" alt="AIMCT Norway 2026" />
@@ -70,7 +70,104 @@
           <span class="site-nav__toggle-line" aria-hidden="true"></span>
         </button>
       </div>
-    </header>
+    </header> -->
+
+    <!-- Nav Bar -->
+  <header class="site-nav" data-site-nav>
+    <div class="site-nav__top">
+      <a class="site-nav__brand site-nav__top-cell" href="#hero" aria-label="AIMCT Angola 2026">
+        <img class="site-nav__logo" src="./assets/images/logona-500.webp"
+          srcset="./assets/images/logona-500.webp 500w, ./assets/images/logona-760.webp 760w, ./assets/images/logona.webp 1400w"
+          sizes="(max-width: 640px) 220px, 459px" width="500" height="138" alt="AIMCT Angola 2026" />
+      </a>
+      <div class="site-nav__event site-nav__top-cell" aria-label="Event details">
+        <p class="site-nav__event-date">
+          <span class="site-nav__event-date-value">1 December 2026</span>
+          <span class="site-nav__event-sep" aria-hidden="true"></span>
+          <span class="site-nav__event-location">
+            <svg class="site-nav__event-pin" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <path d="M12 21s7-6.73 7-11.5A7 7 0 1 0 5 9.5C5 14.27 12 21 12 21Z" />
+              <circle cx="12" cy="9.5" r="2.3" />
+            </svg>
+            Stavanger, Norway
+          </span>
+        </p>
+        <p class="site-nav__event-name">Asset Integrity, Maintenance, Corrosion & Turnaround Conference Norway 2026
+        </p>
+      </div>
+      <!-- <div class="site-nav__partners site-nav__top-cell" aria-label="Event partners">
+        <figure class="site-nav__partner site-nav__partner--strategic">
+          <figcaption>Strategic Partner</figcaption>
+          <img src="./assets/logos/Sponsors/sp-11-260.webp" width="260" height="130"
+            alt="Angolan National Agency For Petroleum, Gas And Biofuels logo" />
+        </figure>
+        <figure class="site-nav__partner">
+          <figcaption>Supporting Partner</figcaption>
+          <img src="./assets/logos/Sponsors/sp-06-260.webp" width="260" height="130"
+            alt="Azule Energy supporting partner logo" />
+        </figure>
+        <figure class="site-nav__partner">
+          <figcaption>Supporting Partner</figcaption>
+          <img src="./assets/logos/Sponsors/sp-23-08.webp" width="260" height="130"
+            alt="Azule Energy supporting partner logo" />
+        </figure>
+        <figure class="site-nav__partner">
+          <figcaption>Supporting Partner</figcaption>
+          <img src="./assets/logos/Sponsors/sp-15.webp" width="260" height="130"
+            alt="Azule Energy supporting partner logo" />
+        </figure>
+
+      </div> -->
+      <div class="site-nav__actions site-nav__top-cell" aria-label="Primary actions">
+        <a class="site-nav__cta" href="register.html">Register</a>
+        <a class="site-nav__cta site-nav__cta--booth" href="sponsor-exhibit/index.html">Sponsor/Exhibit</a>
+      </div>
+      <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav-menu"
+        aria-label="Toggle navigation">
+        <span class="site-nav__toggle-line" aria-hidden="true"></span>
+        <span class="site-nav__toggle-line" aria-hidden="true"></span>
+        <span class="site-nav__toggle-line" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <div class="container site-nav__bar">
+      <nav class="site-nav__menu" id="site-nav-menu" aria-label="Primary">
+        <a class="site-nav__link" href="index.html#global-events">Legacy</a>
+        <a class="site-nav__link" href="index.html#overview">Overview</a>
+        <a class="site-nav__link" href="index.html#strategic-challenges">Challenges</a>
+        <a class="site-nav__link" href="index.html#topics">Topics</a>
+        <a class="site-nav__link" href="index.html#attend">Attend</a>
+        <a class="site-nav__link" href="index.html#numbers">Numbers</a>
+        <a class="site-nav__link" href="index.html#orgs">Sponsors</a>
+        
+        
+      </nav>
+      <div class="site-nav__bar-actions" aria-label="Primary actions">
+        <a class="site-nav__bar-cta" href="register.html">
+          <span class="site-nav__bar-cta-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="M4 12h14M13 6l6 6-6 6" />
+            </svg>
+          </span>
+          Register
+        </a>
+        <a class="site-nav__bar-cta site-nav__bar-cta--booth" href="sponsor-exhibit/index.html">
+          <span class="site-nav__bar-cta-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="M4 11 12 4l8 7M5.5 10v9.5h13V10M9.5 19.5v-5.5h5v5.5" />
+            </svg>
+          </span>
+          Sponsor/Exhibit
+        </a>
+      </div>
+<button class="site-nav__toggle site-nav__bar-toggle" type="button" aria-expanded="false"
+        aria-controls="site-nav-menu" aria-label="Toggle navigation">
+        <span class="site-nav__toggle-line" aria-hidden="true"></span>
+        <span class="site-nav__toggle-line" aria-hidden="true"></span>
+        <span class="site-nav__toggle-line" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
 
     <main class="register-main">
       <section class="register section" aria-labelledby="registration-title">
