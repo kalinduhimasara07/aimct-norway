@@ -520,6 +520,14 @@ main > section + section {
   padding-top: clamp(1rem, 2.2vw, 1.8rem);
 }
 
+.overview + .series-sponsors {
+  margin-top: 0;
+}
+
+.overview + .series-sponsors.section {
+  padding-top: clamp(1rem, 2.2vw, 1.8rem);
+}
+
 .site-nav {
   position: fixed;
   top: 0;
@@ -557,7 +565,7 @@ main > section + section {
 .site-nav__top {
   position: relative;
   width: 100%;
-  min-height: clamp(116px, 10.4vw, 160px);
+  min-height: clamp(84px, 7.6vw, 116px);
   display: grid;
   grid-template-columns: minmax(210px, 0.78fr) minmax(310px, 1.24fr) minmax(180px, auto);
   align-items: center;
@@ -635,8 +643,8 @@ main > section + section {
 .site-nav__top-cell {
   position: relative;
   z-index: 1;
-  min-height: clamp(96px, 8vw, 132px);
-  padding: clamp(0.82rem, 1.7vw, 1.32rem) clamp(1rem, 2.1vw, 2rem);
+  min-height: clamp(68px, 5.8vw, 94px);
+  padding: clamp(0.48rem, 1vw, 0.82rem) clamp(0.9rem, 1.9vw, 1.8rem);
 }
 
 .site-nav__top-cell + .site-nav__top-cell {
@@ -650,7 +658,7 @@ main > section + section {
   top: 50%;
   z-index: 4;
   width: 1px;
-  height: clamp(82px, 7vw, 132px);
+  height: clamp(58px, 4.9vw, 94px);
   background: linear-gradient(to bottom, transparent, rgba(193, 18, 31, 0.32), rgba(26, 95, 168, 0.32), transparent);
   transform: translateY(-50%);
   pointer-events: none;
@@ -727,7 +735,7 @@ main > section + section {
 .site-nav__logo {
   display: block;
   width: auto;
-  height: clamp(92px, 7.5vw, 124px);
+  height: clamp(78px, 6.5vw, 108px);
   object-fit: contain;
   object-position: left center;
   transition: transform 280ms ease, filter 280ms ease;
@@ -4441,11 +4449,6 @@ body.timed-video-popup-open {
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  background:
-    linear-gradient(180deg, #0f1115 0%, rgba(15, 17, 21, 0.72) 9%, rgba(15, 17, 21, 0) 22%),
-    radial-gradient(circle at 16% 18%, rgba(26, 95, 168, 0.12), transparent 30%),
-    radial-gradient(circle at 86% 68%, rgba(193, 18, 31, 0.06), transparent 30%),
-    linear-gradient(135deg, #0f1115 0%, #111720 52%, #0d1c2a 100%);
 }
 
 .strategic::before {
@@ -4745,10 +4748,6 @@ body.timed-video-popup-open {
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  background:
-    radial-gradient(circle at 16% 18%, rgba(26, 95, 168, 0.12), transparent 30%),
-    radial-gradient(circle at 86% 68%, rgba(193, 18, 31, 0.06), transparent 30%),
-    linear-gradient(135deg, #0f1115 0%, #111720 52%, #0d1c2a 100%);
 }
 
 .matter::before {
@@ -4910,10 +4909,18 @@ body.timed-video-popup-open {
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  background:
-    radial-gradient(circle at 16% 18%, rgba(26, 95, 168, 0.12), transparent 30%),
-    radial-gradient(circle at 86% 68%, rgba(193, 18, 31, 0.06), transparent 30%),
-    linear-gradient(135deg, #0f1115 0%, #111720 52%, #0d1c2a 100%);
+}
+
+.strategic,
+.matter,
+.in-room {
+  background: #0f1115;
+}
+
+.strategic::before,
+.matter::before,
+.in-room::before {
+  mask-image: none;
 }
 
 .in-room::before {
@@ -4926,7 +4933,7 @@ body.timed-video-popup-open {
     linear-gradient(90deg, rgba(245, 247, 250, 0.032) 1px, transparent 1px),
     linear-gradient(180deg, rgba(245, 247, 250, 0.026) 1px, transparent 1px);
   background-size: 88px 88px;
-  mask-image: linear-gradient(180deg, transparent 0%, #000 18%, #000 82%, transparent 100%);
+  mask-image: none;
   opacity: 0.24;
 }
 
@@ -5124,7 +5131,7 @@ body.timed-video-popup-open {
   overflow: hidden;
   isolation: isolate;
   background: #0f1115;
-  padding-block: clamp(2.8rem, 6.4vw, 5.4rem);
+  padding-block: clamp(2.8rem, 6.4vw, 5.4rem) clamp(4rem, 8vw, 7rem);
 }
 
 .in-room + .topics {
@@ -5145,7 +5152,9 @@ body.timed-video-popup-open {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  filter: grayscale(100%) contrast(1.08) brightness(0.56);
+  filter: grayscale(88%) contrast(1.04) brightness(0.78);
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 68%, rgba(0, 0, 0, 0.42) 84%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 0%, #000 68%, rgba(0, 0, 0, 0.42) 84%, transparent 100%);
 }
 
 .topics::after {
@@ -5155,10 +5164,10 @@ body.timed-video-popup-open {
   z-index: 0;
   pointer-events: none;
   background:
-    radial-gradient(130% 70% at 50% 0%, rgba(15, 17, 21, 0.94) 0%, rgba(15, 17, 21, 0.7) 34%, rgba(15, 17, 21, 0.34) 68%, rgba(15, 17, 21, 0.12) 100%),
-    radial-gradient(120% 80% at 50% 100%, rgba(15, 17, 21, 0.88) 0%, rgba(15, 17, 21, 0.56) 48%, rgba(15, 17, 21, 0.18) 100%),
-    linear-gradient(90deg, rgba(15, 17, 21, 0.9) 0%, rgba(13, 28, 42, 0.74) 28%, rgba(13, 28, 42, 0.48) 50%, rgba(15, 17, 21, 0.86) 100%),
-    linear-gradient(180deg, #0f1115 0%, rgba(15, 17, 21, 0) 16%, rgba(15, 17, 21, 0) 84%, #0f1115 100%);
+    radial-gradient(130% 70% at 50% 0%, rgba(15, 17, 21, 0.76) 0%, rgba(15, 17, 21, 0.52) 34%, rgba(15, 17, 21, 0.22) 68%, rgba(15, 17, 21, 0.08) 100%),
+    radial-gradient(120% 80% at 50% 100%, rgba(15, 17, 21, 0.72) 0%, rgba(15, 17, 21, 0.38) 48%, rgba(15, 17, 21, 0.1) 100%),
+    linear-gradient(90deg, rgba(15, 17, 21, 0.72) 0%, rgba(13, 28, 42, 0.48) 28%, rgba(13, 28, 42, 0.28) 50%, rgba(15, 17, 21, 0.68) 100%),
+    linear-gradient(180deg, #0f1115 0%, rgba(15, 17, 21, 0) 14%, rgba(15, 17, 21, 0) 70%, rgba(15, 17, 21, 0.74) 88%, #0f1115 100%);
 }
 
 .topics__inner {
@@ -5212,12 +5221,12 @@ body.timed-video-popup-open {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0;
-  border: 1px solid rgba(245, 247, 250, 0.14);
+  border: 0;
   border-radius: 18px;
   background: rgba(15, 17, 21, 0.58);
   padding-block: 0 clamp(0.38rem, 0.8vw, 0.58rem);
   overflow: hidden;
-  box-shadow: 0 26px 62px rgba(0, 0, 0, 0.3);
+  box-shadow: none;
 }
 
 .topics__item {
@@ -5258,6 +5267,10 @@ body.timed-video-popup-open {
   top: 0;
   height: 1px;
   background: rgba(245, 247, 250, 0.11);
+}
+
+.topics__item:nth-last-child(-n + 2)::after {
+  content: none;
 }
 
 .topics__item::before {
@@ -5327,7 +5340,11 @@ body.timed-video-popup-open {
 }
 
 .topics + .attend {
-  margin-top: 0;
+  margin-top: clamp(-4.8rem, -6vw, -2.8rem);
+}
+
+.topics + .attend.section {
+  padding-top: clamp(5rem, 8.4vw, 7.4rem);
 }
 
 .attend::before {
@@ -5340,7 +5357,7 @@ body.timed-video-popup-open {
     linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
   background-size: 88px 88px;
-  mask-image: linear-gradient(180deg, transparent 0%, #000 16%, #000 82%, transparent 100%);
+  mask-image: linear-gradient(180deg, transparent 0%, #000 28%, #000 82%, transparent 100%);
   opacity: 0.2;
 }
 
@@ -5389,9 +5406,9 @@ body.timed-video-popup-open {
 .attend__carousel {
   position: relative;
   overflow: hidden;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   padding-block: clamp(0.75rem, 1.45vw, 1.05rem);
@@ -6241,15 +6258,15 @@ body.timed-video-popup-open {
 
 .testimonials__marquee {
   position: relative;
-  width: 100vw;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  width: 100%;
+  left: auto;
+  right: auto;
+  margin-left: 0;
+  margin-right: 0;
   overflow: hidden;
   --testimonials-distance: 0px;
   --testimonials-duration: 86s;
-  --testimonials-edge-fade: 9%;
+  --testimonials-edge-fade: clamp(1.8rem, 5vw, 4.5rem);
   padding-block: clamp(0.45rem, 1vw, 0.72rem);
   display: block !important;
   min-height: 0;
@@ -6284,7 +6301,7 @@ body.timed-video-popup-open {
   display: flex;
   gap: clamp(0.72rem, 1.35vw, 1rem);
   width: max-content;
-  padding-left: clamp(0.72rem, 1.35vw, 1rem);
+  padding-left: 0;
   will-change: transform;
 }
 
@@ -6426,7 +6443,7 @@ body.timed-video-popup-open {
   }
 
   .testimonials__marquee {
-    --testimonials-edge-fade: 12%;
+    --testimonials-edge-fade: clamp(1rem, 8vw, 2.5rem);
   }
 
   .testimonial-card {
@@ -8658,9 +8675,9 @@ body.timed-video-popup-open {
         180deg,
         rgba(17, 18, 23, 0.86) 0%,
         rgba(17, 18, 23, 0.5) 18%,
-        rgba(17, 18, 23, 0.16) 50%,
-        rgba(17, 18, 23, 0.5) 82%,
-        rgba(17, 18, 23, 0.86) 100%
+        rgba(17, 18, 23, 0.12) 48%,
+        rgba(15, 17, 21, 0.58) 78%,
+        #0f1115 100%
       );
   }
 
