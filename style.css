@@ -5668,10 +5668,8 @@ body.timed-video-popup-open {
   background:
     linear-gradient(180deg, var(--numbers-accent-soft), rgba(245, 247, 250, 0.028) 42%),
     #111720;
-  display: grid;
-  grid-template-rows: auto auto;
-  align-content: start;
-  justify-items: stretch;
+  display: flex;
+  flex-direction: column;
   text-align: left;
   gap: clamp(0.64rem, 1.1vw, 0.9rem);
   overflow: hidden;
@@ -5721,6 +5719,7 @@ body.timed-video-popup-open {
 }
 
 .numbers__card-content {
+  flex: 1 1 auto;
   display: grid;
   align-content: start;
   padding-top: clamp(0.58rem, 1vw, 0.85rem);
@@ -5771,7 +5770,7 @@ body.timed-video-popup-open {
 
 .numbers__media {
   margin: 0;
-  align-self: start;
+  align-self: stretch;
   border-top: 0;
   padding-top: 0;
   overflow: hidden;
