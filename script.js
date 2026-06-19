@@ -1491,7 +1491,7 @@ document.documentElement.classList.add("js-enabled");
 
         const image = document.createElement("img");
         image.src = resolveVersionedAssetPath(speaker.image || "./assets/images/logo.webp");
-        image.alt = `${speaker.name}${speaker.designation ? `, ${speaker.designation}` : ""}${companyText ? ` at ${companyText}` : ""} - AIMCT Angola 2026 speaker`;
+        image.alt = `${speaker.name}${speaker.designation ? `, ${speaker.designation}` : ""}${companyText ? ` at ${companyText}` : ""} - AIMCT Norway 2026 speaker`;
         image.loading = "lazy";
         image.decoding = "async";
         figure.appendChild(image);
@@ -1633,7 +1633,7 @@ document.documentElement.classList.add("js-enabled");
       modalRole.textContent = speaker.designation || "Designation";
       const { companyHtml } = splitCompanyAndNotice(speaker.company || "");
       modalCompany.innerHTML = companyHtml || "<span>Company</span>";
-      modalImage.alt = `${speaker.name}${speaker.designation ? `, ${speaker.designation}` : ""}${modalCompany.textContent ? ` at ${modalCompany.textContent}` : ""} - AIMCT Angola 2026 speaker`;
+      modalImage.alt = `${speaker.name}${speaker.designation ? `, ${speaker.designation}` : ""}${modalCompany.textContent ? ` at ${modalCompany.textContent}` : ""} - AIMCT Norway 2026 speaker`;
       modalBio.innerHTML = speaker.bio || "<span>Bio details will be shared soon.</span>";
 
       modal.hidden = false;
@@ -2161,3 +2161,4 @@ document.documentElement.classList.add("js-enabled");
 
   runAfterInteraction(initMotionEffects);
 })();
+
