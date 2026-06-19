@@ -811,7 +811,7 @@ document.documentElement.classList.add("js-enabled");
     const canAnimate = hasGsap && !reduceMotion && hasOverflowEvents;
     const isMobileViewport = () => mobileViewportQuery.matches;
     const mobileTrackShift = -(100 / cards.length);
-    const carouselEase = "sine.inOut";
+    const carouselEase = "power2.out";
     let visibleCoverIndices = cards.map((_, index) => index % events.length);
     let isAnimating = false;
 
@@ -864,7 +864,7 @@ document.documentElement.classList.add("js-enabled");
       }
 
       isAnimating = true;
-      const travelDistance = normalizedDirection > 0 ? -16 : 16;
+      const travelDistance = normalizedDirection > 0 ? -24 : 24;
 
       const timeline = gsap.timeline({
         defaults: { ease: carouselEase },
@@ -880,7 +880,7 @@ document.documentElement.classList.add("js-enabled");
             cardsTrack,
             {
               xPercent: mobileTrackShift * normalizedDirection,
-              duration: 1.08,
+              duration: 0.45,
               ease: carouselEase
             },
             0
@@ -899,25 +899,25 @@ document.documentElement.classList.add("js-enabled");
           flowEls,
           {
             x: travelDistance,
-            autoAlpha: 0.35,
-            duration: 0.56,
-            stagger: 0.065
+            autoAlpha: 0,
+            duration: 0.22,
+            stagger: 0.03
           },
           0
         )
         .add(() => {
           paintCards(nextVisible);
-          gsap.set(flowEls, { x: -travelDistance, autoAlpha: 0.35 });
+          gsap.set(flowEls, { x: -travelDistance, autoAlpha: 0 });
         })
         .to(
           flowEls,
           {
             x: 0,
             autoAlpha: 1,
-            duration: 0.78,
-            stagger: 0.065
+            duration: 0.32,
+            stagger: 0.03
           },
-          ">-0.12"
+          ">-0.05"
         );
     };
 
@@ -1797,6 +1797,29 @@ document.documentElement.classList.add("js-enabled");
       }
     });
 
+  gsap.from([".legacy-highlights__kicker", ".legacy-highlights__title"], {
+    y: 30,
+    autoAlpha: 0,
+    duration: 0.8,
+    stagger: 0.1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".legacy-highlights",
+      start: "top 80%"
+    }
+  });
+
+  gsap.from(".legacy-highlights__media", {
+    y: 24,
+    autoAlpha: 0,
+    duration: 0.85,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".legacy-highlights__media",
+      start: "top 82%"
+    }
+  });
+
   gsap.from([".overview__kicker", ".overview__title", ".overview__fact"], {
     y: 42,
     autoAlpha: 0,
@@ -2076,6 +2099,29 @@ document.documentElement.classList.add("js-enabled");
     ease: "power2.out",
     scrollTrigger: {
       trigger: ".series-sponsors__marquee",
+      start: "top 82%"
+    }
+  });
+
+  gsap.from(".supporting-partners__title", {
+    y: 30,
+    autoAlpha: 0,
+    duration: 0.8,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: "#series-supporting-partners",
+      start: "top 80%"
+    }
+  });
+
+  gsap.from(".supporting-partners__logo", {
+    y: 20,
+    autoAlpha: 0,
+    duration: 0.7,
+    stagger: 0.05,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".supporting-partners__logos",
       start: "top 82%"
     }
   });
