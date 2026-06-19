@@ -1745,6 +1745,32 @@ document.documentElement.classList.add("js-enabled");
     return;
   }
 
+  // Kicker underline scroll animation
+  const kickerSelectors = [
+    ".speaker-showcase__kicker",
+    ".series-speakers__kicker",
+    ".supporting-partners__kicker",
+    ".series-sponsors__kicker",
+    ".numbers__kicker",
+    ".integrity-moment__kicker",
+    ".strategic__kicker",
+    ".matter__kicker",
+    ".in-room__kicker",
+    ".topics__kicker",
+    ".attend__kicker",
+    ".testimonials__kicker",
+    ".final-register-cta__kicker"
+  ];
+
+  document.querySelectorAll(kickerSelectors.join(",")).forEach((kicker) => {
+    ScrollTrigger.create({
+      trigger: kicker,
+      start: "top 88%",
+      onEnter: () => kicker.classList.add("is-active"),
+      onLeaveBack: () => kicker.classList.remove("is-active")
+    });
+  });
+
   gsap.from([".global-events__kicker", ".global-events__title", ".global-events__intro"], {
     y: 38,
     autoAlpha: 0,
