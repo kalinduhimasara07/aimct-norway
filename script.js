@@ -1751,6 +1751,8 @@ document.documentElement.classList.add("js-enabled");
     ".series-speakers__kicker",
     ".supporting-partners__kicker",
     ".series-sponsors__kicker",
+    ".global-events__kicker",
+    ".legacy-highlights__kicker",
     ".numbers__kicker",
     ".integrity-moment__kicker",
     ".strategic__kicker",
@@ -2103,28 +2105,80 @@ document.documentElement.classList.add("js-enabled");
     }
   });
 
-  gsap.from(".supporting-partners__title", {
-    y: 30,
-    autoAlpha: 0,
-    duration: 0.8,
-    ease: "power3.out",
+  // Strategic Partner Animation
+  const strategicTimeline = gsap.timeline({
     scrollTrigger: {
-      trigger: "#series-supporting-partners",
-      start: "top 80%"
+      trigger: ".strategic-slide_div",
+      start: "top 82%",
+      once: true
     }
   });
 
-  gsap.from(".supporting-partners__logo", {
-    y: 20,
-    autoAlpha: 0,
-    duration: 0.7,
-    stagger: 0.05,
-    ease: "power2.out",
+  strategicTimeline
+    .from("#strategic-partner-title", {
+      y: 30,
+      autoAlpha: 0,
+      duration: 1.2,
+      ease: "power3.out"
+    })
+    .from(".strategic-slide_div + .supporting-partners__logos .supporting-partners__logo", {
+      y: 40,
+      scale: 0.95,
+      autoAlpha: 0,
+      duration: 1.8,
+      stagger: 0.25,
+      ease: "power2.out"
+    }, "-=0.6");
+
+  // Supporting Partners Animation
+  const supportingTimeline = gsap.timeline({
     scrollTrigger: {
-      trigger: ".supporting-partners__logos",
-      start: "top 82%"
+      trigger: "#supporting-partners",
+      start: "top 82%",
+      once: true
     }
   });
+
+  supportingTimeline
+    .from("#supporting-partners .supporting-partners__title", {
+      y: 30,
+      autoAlpha: 0,
+      duration: 1.2,
+      ease: "power3.out"
+    })
+    .from("#supporting-partners .supporting-partners__logo", {
+      y: 40,
+      scale: 0.95,
+      autoAlpha: 0,
+      duration: 1.8,
+      stagger: 0.25,
+      ease: "power2.out"
+    }, "-=0.6");
+
+  // Series Supporting Partners Animation
+  const partnersTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#series-supporting-partners",
+      start: "top 82%",
+      once: true
+    }
+  });
+
+  partnersTimeline
+    .from("#series-supporting-partners .supporting-partners__title", {
+      y: 30,
+      autoAlpha: 0,
+      duration: 1.2,
+      ease: "power3.out"
+    })
+    .from("#series-supporting-partners .supporting-partners__logo", {
+      y: 40,
+      scale: 0.95,
+      autoAlpha: 0,
+      duration: 1.8,
+      stagger: 0.25,
+      ease: "power2.out"
+    }, "-=0.6");
 
   gsap.from([".numbers__kicker", ".numbers__title", ".numbers__intro"], {
     y: 36,
