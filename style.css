@@ -2171,6 +2171,14 @@ main > section + section {
   gap: var(--supporting-logo-gap);
 }
 
+#norway-sponsors-partners .supporting-partners__logos {
+  border-top: 1px solid rgba(245, 247, 250, 0.16);
+  border-bottom: 1px solid rgba(245, 247, 250, 0.16);
+  border-inline: 0;
+  border-radius: 0;
+  background: #0f1115;
+}
+
 .supporting-partners__row {
   display: flex;
   flex-wrap: wrap;
@@ -3002,7 +3010,10 @@ main > section + section {
   overflow: hidden;
   isolation: isolate;
   margin-top: -1px;
-  background: #0f1115;
+  background:
+    linear-gradient(118deg, rgba(15, 17, 21, 0.92) 0%, rgba(15, 17, 21, 0.64) 48%, rgba(15, 17, 21, 0.9) 100%),
+    url("./assets/images/oil.png") center / 36% auto no-repeat,
+    #0f1115;
 }
 
 .overview::before {
@@ -3047,27 +3058,35 @@ main > section + section {
 }
 
 .overview__kicker {
+  position: relative;
+  display: inline-flex;
   width: fit-content;
-  margin: 0 0 0.95rem;
+  max-width: 100%;
+  align-items: center;
+  margin: 0;
   padding: 0 0 0.42rem;
   border: none;
-  border-bottom: 2px solid rgba(26, 95, 168, 0.5);
+  border-radius: 0;
   font-family: var(--font-kicker);
-  font-size: clamp(0.9rem, 0.22vw + 0.86rem, 1.02rem);
+  font-size: clamp(0.85rem, 0.2vw + 0.8rem, 0.98rem);
   font-weight: 700;
-  letter-spacing: 0.12em;
+  line-height: 1;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  background: linear-gradient(
-    90deg,
-    var(--color-accent) 0%,
-    var(--color-bg) 50%,
-    var(--color-accent) 100%
-  );
-  background-size: 240% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.16);
+  white-space: nowrap;
+  background: transparent;
+  box-shadow: none;
+  color: #38bdf8;
+}
+
+.overview__kicker::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-primary);
 }
 
 .overview__editorial {
@@ -3081,8 +3100,8 @@ main > section + section {
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 14px;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.025)),
-    rgba(10, 22, 40, 0.7);
+    linear-gradient(135deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.016)),
+    rgba(10, 22, 40, 0.34);
   box-shadow: 0 28px 70px rgba(0, 0, 0, 0.00001);
   backdrop-filter: none;
 }
@@ -3118,7 +3137,7 @@ main > section + section {
   z-index: 1;
   display: grid;
   align-content: start;
-  gap: 0;
+  gap: clamp(0.75rem, 1.4vw, 1.1rem);
   padding-left: 0;
   padding-right: clamp(1rem, 2vw, 1.8rem);
   border-right: 1px solid rgba(245, 247, 250, 0.18);
@@ -3341,7 +3360,7 @@ main > section + section {
   margin-top: -1px;
   overflow: hidden;
   isolation: isolate;
-  background: var(--color-deep);
+  background: #0f1115;
 }
 
 .overview-image img {
@@ -3361,7 +3380,7 @@ main > section + section {
 @media (min-width: 1200px) {
   .overview-image img {
     object-fit: cover;
-    background: var(--color-deep);
+    background: #0f1115;
   }
 
   .overview-image::before {
@@ -3371,9 +3390,9 @@ main > section + section {
     pointer-events: none;
     z-index: 2;
     background:
-      linear-gradient(180deg, var(--color-deep) 0%, rgba(10, 22, 40, 0.98) 18px, rgba(10, 22, 40, 0) 88px),
-      linear-gradient(90deg, rgba(10, 22, 40, 0.92) 0%, rgba(14, 36, 66, 0.66) 42%, rgba(14, 36, 66, 0.62) 58%, rgba(10, 22, 40, 0.92) 100%),
-      linear-gradient(180deg, rgba(10, 22, 40, 0.98) 0%, rgba(10, 22, 40, 0.94) 14%, rgba(14, 36, 66, 0.56) 46%, rgba(10, 22, 40, 0.88) 100%);
+      linear-gradient(180deg, #0f1115 0%, rgba(15, 17, 21, 0.98) 18px, rgba(15, 17, 21, 0) 88px),
+      linear-gradient(90deg, rgba(15, 17, 21, 0.92) 0%, rgba(15, 17, 21, 0.58) 42%, rgba(15, 17, 21, 0.56) 58%, rgba(15, 17, 21, 0.92) 100%),
+      linear-gradient(180deg, rgba(15, 17, 21, 0.98) 0%, rgba(15, 17, 21, 0.9) 14%, rgba(15, 17, 21, 0.58) 46%, rgba(15, 17, 21, 0.9) 100%);
   }
 }
 
@@ -3387,9 +3406,9 @@ main > section + section {
   pointer-events: none;
   z-index: 2;
   background:
-    linear-gradient(180deg, transparent 0%, rgba(10, 22, 40, 0.58) 44%, rgba(10, 22, 40, 0.95) 100%),
-    radial-gradient(circle at 18% 82%, rgba(14, 36, 66, 0.2), transparent 36%),
-    radial-gradient(circle at 78% 28%, rgba(18, 46, 82, 0.16), transparent 34%);
+    linear-gradient(180deg, transparent 0%, rgba(15, 17, 21, 0.62) 44%, #0f1115 100%),
+    radial-gradient(circle at 18% 82%, rgba(15, 17, 21, 0.28), transparent 36%),
+    radial-gradient(circle at 78% 28%, rgba(15, 17, 21, 0.18), transparent 34%);
 }
 
 .overview-image__overlay {
@@ -3719,7 +3738,7 @@ main > section + section {
 }
 
 .speaker-group--general {
-  background: linear-gradient(180deg, rgba(245, 247, 250, 0.04), rgba(15, 17, 21, 0.72));
+  background: linear-gradient(180deg, rgba(245, 247, 250, 0.045), rgba(10, 22, 40, 0.76));
 }
 
 .speaker-group__head {
@@ -3818,12 +3837,12 @@ main > section + section {
 
 .speaker-card:hover,
 .speaker-card:focus-visible {
-  transform: translateY(-4px);
-  border-color: color-mix(in srgb, var(--speaker-card-accent) 44%, rgba(245, 247, 250, 0.24));
+  transform: translateY(-6px);
+  border-color: #1e3a5f;
   background:
     linear-gradient(180deg, color-mix(in srgb, var(--speaker-card-accent-soft) 72%, rgba(245, 247, 250, 0.05)), rgba(245, 247, 250, 0.028) 48%),
     #111720;
-  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.34);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.38), 0 0 0 1px rgba(30, 58, 95, 0.72), 0 0 24px rgba(30, 58, 95, 0.28);
 }
 
 .speaker-card__media {
