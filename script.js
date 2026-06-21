@@ -1822,6 +1822,41 @@ document.documentElement.classList.add("js-enabled");
     }
   });
 
+  gsap.from([".integrity-moment__kicker", ".integrity-moment__title"], {
+    y: 30,
+    autoAlpha: 0,
+    duration: 1.05,
+    stagger: 0.12,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".integrity-moment",
+      start: "top 78%"
+    }
+  });
+
+  gsap.from(".integrity-row", {
+    x: -26,
+    autoAlpha: 0,
+    duration: 0.95,
+    stagger: 0.11,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".integrity-moment__rows",
+      start: "top 82%"
+    }
+  });
+
+  gsap.from(".integrity-moment__visual", {
+    x: 34,
+    autoAlpha: 0,
+    duration: 1.15,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".integrity-moment__split",
+      start: "top 78%"
+    }
+  });
+
   gsap.from([".overview__kicker", ".overview__title", ".overview__fact"], {
     y: 42,
     autoAlpha: 0,
@@ -1953,8 +1988,8 @@ document.documentElement.classList.add("js-enabled");
   gsap.from([".strategic__kicker", ".strategic__title"], {
     y: 34,
     autoAlpha: 0,
-    duration: 0.85,
-    stagger: 0.1,
+    duration: 1.12,
+    stagger: 0.14,
     ease: "power3.out",
     scrollTrigger: {
       trigger: ".strategic",
@@ -1965,12 +2000,53 @@ document.documentElement.classList.add("js-enabled");
   gsap.from([".strategic__carousel", ".strategic__controls"], {
     y: 22,
     autoAlpha: 0,
-    duration: 0.75,
-    stagger: 0.1,
+    duration: 1.05,
+    stagger: 0.16,
     ease: "power2.out",
     scrollTrigger: {
       trigger: ".strategic__carousel",
       start: "top 82%"
+    }
+  });
+
+  gsap.from(".strategic__controls > *", {
+    y: 10,
+    autoAlpha: 0,
+    duration: 0.82,
+    stagger: 0.08,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".strategic__controls",
+      start: "top 84%"
+    }
+  });
+
+  gsap.from([
+    ".strategic-slide.is-active .strategic-slide__title",
+    ".strategic-slide.is-active .strategic-slide__label",
+    ".strategic-slide.is-active .strategic-slide__summary",
+    ".strategic-slide.is-active .strategic-slide__points li",
+    ".strategic-slide.is-active .strategic-slide__risk"
+  ], {
+    y: 18,
+    autoAlpha: 0,
+    duration: 0.95,
+    stagger: 0.08,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".strategic__carousel",
+      start: "top 78%"
+    }
+  });
+
+  gsap.from(".strategic-slide.is-active .strategic-slide__media", {
+    x: 28,
+    autoAlpha: 0,
+    duration: 1.15,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".strategic__carousel",
+      start: "top 78%"
     }
   });
 
@@ -2257,7 +2333,7 @@ document.documentElement.classList.add("js-enabled");
       cloneClass: "testimonial-card--clone",
       distanceVar: "--testimonials-distance",
       durationVar: "--testimonials-duration",
-      minDuration: 72,
+      minDuration: 88,
       pixelsPerSecond: 34
     });
   };
