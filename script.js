@@ -2121,7 +2121,7 @@ document.documentElement.classList.add("js-enabled");
       duration: 1.2,
       ease: "power3.out"
     })
-    .from(".strategic-slide_div + .supporting-partners__logos .supporting-partners__logo", {
+    .from(".strategic-logos-wrapper .supporting-partners__logo", {
       y: 40,
       scale: 0.95,
       autoAlpha: 0,
