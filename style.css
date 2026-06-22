@@ -8349,6 +8349,10 @@ html:not(.js-enabled) .final-register-cta__kicker::after {
     height: 1.85rem;
   }
 
+  .strategic__arrow {
+    display: none;
+  }
+
   .strategic__dot {
     width: 1.84rem;
     height: 1.85rem;
