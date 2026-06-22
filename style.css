@@ -6798,7 +6798,7 @@ body.timed-video-popup-open {
   position: relative;
   overflow: hidden;
   background:
-    linear-gradient(rgba(5, 7, 11, 0.48), rgba(5, 7, 11, 0.74)),
+    linear-gradient(rgba(5, 7, 11, 0.32), rgba(5, 7, 11, 0.58)),
     url("./assets/images/map.webp") center / min(68%, 1240px) auto no-repeat,
     #05070b;
   background-position: center center, center center, center center;
@@ -6811,8 +6811,8 @@ body.timed-video-popup-open {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(5, 7, 11, 0.9) 0%, rgba(5, 7, 11, 0.52) 48%, rgba(5, 7, 11, 0.86) 100%),
-    linear-gradient(180deg, rgba(5, 7, 11, 0.58) 0%, rgba(5, 7, 11, 0.9) 100%);
+    linear-gradient(90deg, rgba(5, 7, 11, 0.76) 0%, rgba(5, 7, 11, 0.32) 48%, rgba(5, 7, 11, 0.72) 100%),
+    linear-gradient(180deg, rgba(5, 7, 11, 0.38) 0%, rgba(5, 7, 11, 0.78) 100%);
   pointer-events: none;
 }
 
