@@ -810,7 +810,6 @@ document.documentElement.classList.add("js-enabled");
     const hasOverflowEvents = events.length > cards.length;
     const canAnimate = hasGsap && !reduceMotion && hasOverflowEvents;
     const isMobileViewport = () => mobileViewportQuery.matches;
-    const mobileTrackShift = -(100 / cards.length);
     const carouselEase = "power2.out";
     let visibleCoverIndices = cards.map((_, index) => index % events.length);
     let isAnimating = false;
@@ -875,20 +874,36 @@ document.documentElement.classList.add("js-enabled");
       });
 
       if (isMobileViewport()) {
+        const activeMobileFlow = slots[0] ? slots[0].flow : null;
+        const mobileTravelDistance = normalizedDirection > 0 ? -18 : 18;
+
+        if (!activeMobileFlow) {
+          visibleCoverIndices = nextVisible;
+          paintCards(visibleCoverIndices);
+          isAnimating = false;
+          return;
+        }
+
         timeline
           .to(
-            cardsTrack,
+            activeMobileFlow,
             {
-              xPercent: mobileTrackShift * normalizedDirection,
-              duration: 0.45,
+              x: mobileTravelDistance,
+              autoAlpha: 0,
+              duration: 0.22,
               ease: carouselEase
             },
             0
           )
           .add(() => {
             paintCards(nextVisible);
-            gsap.set(cardsTrack, { xPercent: 0 });
-            gsap.set(flowEls, { x: 0, autoAlpha: 1 });
+            gsap.set(activeMobileFlow, { x: -mobileTravelDistance, autoAlpha: 0 });
+          })
+          .to(activeMobileFlow, {
+            x: 0,
+            autoAlpha: 1,
+            duration: 0.32,
+            ease: carouselEase
           });
 
         return;
@@ -1786,7 +1801,6 @@ document.documentElement.classList.add("js-enabled");
   });
 
   gsap.from(".global-events__card", {
-    y: 28,
     autoAlpha: 0,
     duration: 0.82,
     stagger: {
@@ -1795,10 +1809,10 @@ document.documentElement.classList.add("js-enabled");
     },
     ease: "power2.out",
     scrollTrigger: {
-        trigger: ".global-events__stage",
-        start: "top 82%"
-      }
-    });
+      trigger: ".global-events__stage",
+      start: "top 82%"
+    }
+  });
 
   gsap.from(".global-events__chevron", {
     y: 12,
@@ -2010,11 +2024,10 @@ document.documentElement.classList.add("js-enabled");
     }
   });
 
-  gsap.from([".strategic__carousel", ".strategic__controls"], {
+  gsap.from(".strategic__carousel", {
     y: 22,
     autoAlpha: 0,
     duration: 1.05,
-    stagger: 0.16,
     ease: "power2.out",
     scrollTrigger: {
       trigger: ".strategic__carousel",
@@ -2022,8 +2035,17 @@ document.documentElement.classList.add("js-enabled");
     }
   });
 
+  gsap.from(".strategic__controls", {
+    autoAlpha: 0,
+    duration: 0.82,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".strategic__controls",
+      start: "top 84%"
+    }
+  });
+
   gsap.from(".strategic__controls > *", {
-    y: 10,
     autoAlpha: 0,
     duration: 0.82,
     stagger: 0.08,
@@ -2099,8 +2121,19 @@ document.documentElement.classList.add("js-enabled");
     }
   });
 
-  gsap.from([".in-room__line", ".in-room__item"], {
+  gsap.from(".in-room__line", {
     y: 20,
+    autoAlpha: 0,
+    duration: 0.7,
+    stagger: 0.08,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".in-room__layout",
+      start: "top 82%"
+    }
+  });
+
+  gsap.from(".in-room__item", {
     autoAlpha: 0,
     duration: 0.7,
     stagger: 0.08,
@@ -2282,7 +2315,6 @@ document.documentElement.classList.add("js-enabled");
   });
 
   gsap.from(".numbers__card", {
-    y: 30,
     autoAlpha: 0,
     duration: 0.75,
     stagger: 0.08,
