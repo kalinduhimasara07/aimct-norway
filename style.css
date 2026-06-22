@@ -3378,7 +3378,7 @@ main > section + section {
   min-height: clamp(520px, 64vw, 720px);
   object-fit: cover;
   object-position: center;
-  filter: grayscale(24%) brightness(0.72) contrast(1.05) saturate(0.82);
+  filter: grayscale(18%) brightness(0.9) contrast(1.04) saturate(0.9);
   position: relative;
   z-index: 1;
   transform: scale(1.015);
@@ -3399,9 +3399,9 @@ main > section + section {
     pointer-events: none;
     z-index: 2;
     background:
-      linear-gradient(180deg, #0f1115 0%, rgba(15, 17, 21, 0.98) 18px, rgba(15, 17, 21, 0) 88px),
-      linear-gradient(90deg, rgba(15, 17, 21, 0.92) 0%, rgba(15, 17, 21, 0.58) 42%, rgba(15, 17, 21, 0.56) 58%, rgba(15, 17, 21, 0.92) 100%),
-      linear-gradient(180deg, rgba(15, 17, 21, 0.98) 0%, rgba(15, 17, 21, 0.9) 14%, rgba(15, 17, 21, 0.58) 46%, rgba(15, 17, 21, 0.9) 100%);
+      linear-gradient(180deg, #0f1115 0%, rgba(15, 17, 21, 0.9) 18px, rgba(15, 17, 21, 0) 88px),
+      linear-gradient(90deg, rgba(15, 17, 21, 0.76) 0%, rgba(15, 17, 21, 0.42) 42%, rgba(15, 17, 21, 0.4) 58%, rgba(15, 17, 21, 0.76) 100%),
+      linear-gradient(180deg, rgba(15, 17, 21, 0.88) 0%, rgba(15, 17, 21, 0.74) 14%, rgba(15, 17, 21, 0.38) 46%, rgba(15, 17, 21, 0.78) 100%);
   }
 }
 
@@ -3415,9 +3415,9 @@ main > section + section {
   pointer-events: none;
   z-index: 2;
   background:
-    linear-gradient(180deg, transparent 0%, rgba(15, 17, 21, 0.62) 44%, #0f1115 100%),
-    radial-gradient(circle at 18% 82%, rgba(15, 17, 21, 0.28), transparent 36%),
-    radial-gradient(circle at 78% 28%, rgba(15, 17, 21, 0.18), transparent 34%);
+    linear-gradient(180deg, transparent 0%, rgba(15, 17, 21, 0.46) 44%, #0f1115 100%),
+    radial-gradient(circle at 18% 82%, rgba(15, 17, 21, 0.18), transparent 36%),
+    radial-gradient(circle at 78% 28%, rgba(15, 17, 21, 0.12), transparent 34%);
 }
 
 .overview-image__overlay {
