@@ -1786,18 +1786,31 @@ document.documentElement.classList.add("js-enabled");
   });
 
   gsap.from(".global-events__card", {
+    y: 28,
     autoAlpha: 0,
-    duration: 0.7,
+    duration: 0.82,
     stagger: {
-      each: 0.08,
+      each: 0.1,
       from: "center"
     },
-    ease: "power3.out",
+    ease: "power2.out",
     scrollTrigger: {
         trigger: ".global-events__stage",
         start: "top 82%"
       }
     });
+
+  gsap.from(".global-events__chevron", {
+    y: 12,
+    autoAlpha: 0,
+    duration: 0.68,
+    stagger: 0.08,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".global-events__stage",
+      start: "top 82%"
+    }
+  });
 
   gsap.from([".legacy-highlights__kicker", ".legacy-highlights__title"], {
     y: 30,
