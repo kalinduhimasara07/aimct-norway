@@ -144,6 +144,15 @@ document.documentElement.classList.add("js-enabled");
         return;
       }
 
+      const isMobileHeader = window.matchMedia("(max-width: 640px)").matches;
+
+      if (isMobileHeader) {
+        const eventBadge = nav.querySelector(".site-nav__event");
+        const mobileOffset = (topPanel ? topPanel.offsetHeight : 0) + (eventBadge ? eventBadge.offsetHeight : 0) + 28;
+        document.documentElement.style.setProperty("--register-nav-offset", `${Math.ceil(mobileOffset)}px`);
+        return;
+      }
+
       const expandedHeight = (topPanel ? topPanel.scrollHeight : 0) + (bar ? bar.offsetHeight : 0);
       document.documentElement.style.setProperty("--register-nav-offset", `${Math.ceil(expandedHeight + 32)}px`);
     };
@@ -1711,50 +1720,6 @@ document.documentElement.classList.add("js-enabled");
     }
 
     initStrategicCarousel();
-
-  if (document.documentElement.classList.contains("has-splash")) {
-    const heroTimeline = gsap.timeline({ defaults: { ease: "power3.out" } });
-
-    heroTimeline
-      .from(
-        ".hero__eyebrow-meta",
-        {
-          y: 28,
-          autoAlpha: 0,
-          duration: 0.8
-        },
-        "<0.15"
-      )
-      .from(
-        [".hero__kicker", ".hero__title"],
-        {
-          y: 52,
-          autoAlpha: 0,
-          duration: 1.1,
-          stagger: 0.08
-        },
-        "<0.05"
-      )
-      .from(
-        [".hero__intro", ".hero__actions"],
-        {
-          y: 26,
-          autoAlpha: 0,
-          duration: 0.7,
-          stagger: 0.08
-        },
-        "<0.2"
-      )
-      .from(
-        ".marquee",
-        {
-          y: 36,
-          autoAlpha: 0,
-          duration: 0.9
-        },
-        "<0.1"
-      );
-  }
 
   if (!ScrollTrigger) {
     return;
