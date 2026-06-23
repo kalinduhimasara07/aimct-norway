@@ -4595,10 +4595,19 @@ body.timed-video-popup-open {
 .strategic-slide {
   grid-area: 1 / 1;
   display: grid;
-  grid-template-columns: minmax(0, 1.04fr) minmax(320px, 0.76fr);
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.82fr);
   align-items: stretch;
-  gap: clamp(0.9rem, 1.8vw, 1.4rem);
-  min-height: clamp(410px, 36vw, 520px);
+  gap: 0;
+  min-height: clamp(270px, 21vw, 320px);
+  overflow: hidden;
+  border: 1px solid rgba(245, 247, 250, 0.14);
+  border-radius: 18px;
+  background:
+    linear-gradient(110deg, rgba(26, 95, 168, 0.045), transparent 38%),
+    rgba(15, 17, 21, 0.94);
+  box-shadow:
+    0 18px 58px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(245, 247, 250, 0.06);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -4619,26 +4628,39 @@ body.timed-video-popup-open {
 .strategic-slide__content {
   min-width: 0;
   position: relative;
+  z-index: 2;
   display: grid;
   align-content: start;
   gap: clamp(0.58rem, 0.95vw, 0.82rem);
-  border: 1px solid rgba(245, 247, 250, 0.13);
-  border-radius: 16px;
+  border: 0;
+  border-radius: 0;
   background:
-    linear-gradient(90deg, rgba(26, 95, 168, 0.06), transparent 20%),
-    rgba(15, 17, 21, 0.84);
-  padding: clamp(1.1rem, 2.1vw, 1.8rem);
-  overflow: hidden;
+    linear-gradient(
+      90deg,
+      rgba(15, 17, 21, 0.98) 0%,
+      rgba(15, 17, 21, 0.96) 72%,
+      rgba(15, 17, 21, 0.86) 88%,
+      rgba(15, 17, 21, 0) 100%
+    ),
+    linear-gradient(90deg, rgba(26, 95, 168, 0.055), transparent 34%);
+  padding: clamp(1.15rem, 2vw, 1.65rem) clamp(2rem, 3.6vw, 3.6rem) clamp(1.15rem, 2vw, 1.65rem) clamp(1.15rem, 2vw, 1.65rem);
+  overflow: visible;
 }
 
 .strategic-slide__title {
   margin: 0 0 clamp(0.24rem, 0.65vw, 0.48rem);
-  max-width: 28ch;
-  font-size: clamp(1.35rem, 2.5vw, 2.45rem);
+  max-width: 36ch;
+  font-size: clamp(1.35rem, 2.25vw, 2.2rem);
   font-weight: 800;
   line-height: 1.16;
   color: rgba(255, 255, 255, 0.98);
   text-wrap: balance;
+}
+
+@media (min-width: 993px) {
+  .strategic-slide__title {
+    max-width: 38ch;
+  }
 }
 
 .strategic-slide__label {
@@ -4719,27 +4741,49 @@ body.timed-video-popup-open {
 
 .strategic-slide__media {
   position: relative;
+  z-index: 1;
   margin: 0;
+  margin-left: clamp(-5.2rem, -5vw, -2.4rem);
   height: 100%;
-  min-height: 0;
+  min-height: clamp(270px, 21vw, 320px);
   align-self: start;
   overflow: hidden;
-  border: 1px solid rgba(245, 247, 250, 0.12);
-  border-radius: 16px;
-  background: rgba(245, 247, 250, 0.04);
+  border: 0;
+  border-radius: 0;
+  background: rgba(245, 247, 250, 0.03);
+}
+
+.strategic-slide__media::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  z-index: 2;
+  width: min(46%, 240px);
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(15, 17, 21, 0.98) 0%,
+      rgba(15, 17, 21, 0.78) 28%,
+      rgba(15, 17, 21, 0.34) 58%,
+      rgba(15, 17, 21, 0) 100%
+    );
 }
 
 .strategic-slide__media::after {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 1;
   pointer-events: none;
   background:
-    linear-gradient(180deg, rgba(15, 17, 21, 0.1) 0%, rgba(15, 17, 21, 0.78) 100%),
-    linear-gradient(90deg, rgba(26, 95, 168, 0.18), transparent 42%, rgba(193, 18, 31, 0.1));
+    linear-gradient(180deg, rgba(15, 17, 21, 0.04) 0%, rgba(15, 17, 21, 0.7) 100%),
+    linear-gradient(90deg, rgba(26, 95, 168, 0.14), transparent 46%, rgba(193, 18, 31, 0.08));
 }
 
 .strategic-slide__media img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -8482,13 +8526,19 @@ html:not(.js-enabled) .final-register-cta__kicker::after {
 
   .strategic-slide {
     grid-template-columns: 1fr;
-    gap: 0.78rem;
+    grid-template-rows: auto minmax(clamp(210px, 48vw, 295px), 1fr);
+    align-self: stretch;
+    gap: 0;
+    height: 100%;
     min-height: 0;
   }
 
   .strategic-slide__content {
     padding: 0.82rem;
-    border-radius: 14px;
+    border-radius: 0;
+    background:
+      linear-gradient(180deg, rgba(15, 17, 21, 0.98) 0%, rgba(15, 17, 21, 0.92) 100%),
+      linear-gradient(90deg, rgba(26, 95, 168, 0.055), transparent 34%);
   }
 
   .strategic-slide__title {
@@ -8506,13 +8556,40 @@ html:not(.js-enabled) .final-register-cta__kicker::after {
   }
 
   .strategic-slide__media {
-    height: clamp(210px, 48vw, 295px);
+    margin-left: 0;
+    height: 100%;
+    min-height: clamp(210px, 48vw, 295px);
+    align-self: stretch;
+    background: #0f1115;
+  }
+
+  .strategic-slide__media::before {
+    inset: 0;
+    width: 100%;
+    z-index: 2;
+    background:
+      linear-gradient(
+        180deg,
+        #0f1115 0%,
+        rgba(15, 17, 21, 0.96) 9%,
+        rgba(15, 17, 21, 0.68) 22%,
+        rgba(15, 17, 21, 0.24) 40%,
+        rgba(15, 17, 21, 0) 58%
+      );
+  }
+
+  .strategic-slide__media img {
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    min-height: 100%;
+    transform: none;
   }
 
   .strategic__controls {
     justify-self: center;
     align-self: center;
-    margin-top: 0.18rem;
+    margin-top: 0.72rem;
     margin-bottom: clamp(0.7rem, 3.8vw, 1rem);
     justify-content: center;
     max-width: 100%;
