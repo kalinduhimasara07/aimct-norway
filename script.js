@@ -986,11 +986,11 @@ document.documentElement.classList.add("js-enabled");
     }
 
     const slides = Array.from(carousel.querySelectorAll(".strategic-slide"));
-    const dots = Array.from(strategicSection.querySelectorAll(".strategic__dot"));
+    const track = carousel.querySelector("[data-strategic-track]");
     const prevButton = strategicSection.querySelector(".strategic__arrow--prev");
     const nextButton = strategicSection.querySelector(".strategic__arrow--next");
 
-    if (slides.length === 0 || dots.length !== slides.length || !prevButton || !nextButton) {
+    if (!track || slides.length === 0 || !prevButton || !nextButton) {
       return;
     }
 
@@ -998,30 +998,51 @@ document.documentElement.classList.add("js-enabled");
       0,
       slides.findIndex((slide) => slide.classList.contains("is-active"))
     );
+    let startIndex = 0;
+    let dragStartX = 0;
+    let dragDeltaX = 0;
 
-    const updateSlides = (nextIndex) => {
+    const getVisibleCount = () => {
+      const value = window.getComputedStyle(carousel).getPropertyValue("--strategic-visible-cards");
+      const count = Number.parseInt(value, 10);
+      return Number.isFinite(count) && count > 0 ? count : 1;
+    };
+
+    const getMaxStartIndex = () => Math.max(0, slides.length - getVisibleCount());
+
+    const clampStartIndex = (index) => Math.min(Math.max(index, 0), getMaxStartIndex());
+
+    const getStartForActive = (index) => clampStartIndex(index);
+
+    const updateArrowState = () => {
+      const maxStartIndex = getMaxStartIndex();
+      prevButton.disabled = startIndex <= 0;
+      nextButton.disabled = startIndex >= maxStartIndex;
+    };
+
+    const updateTrackPosition = () => {
+      startIndex = clampStartIndex(startIndex);
+      const offset = slides[startIndex] ? slides[startIndex].offsetLeft : 0;
+      track.style.transform = `translate3d(${-offset}px, 0, 0)`;
+      updateArrowState();
+    };
+
+    const updateSlides = (nextIndex, requestedStartIndex = getStartForActive(nextIndex)) => {
+      startIndex = clampStartIndex(requestedStartIndex);
+      const clampedIndex = Math.min(Math.max(nextIndex, 0), slides.length - 1);
+
       slides.forEach((slide, index) => {
-        const isActive = index === nextIndex;
+        const isActive = index === clampedIndex;
         slide.classList.toggle("is-active", isActive);
-        slide.setAttribute("aria-hidden", isActive ? "false" : "true");
+        slide.setAttribute("aria-hidden", "false");
       });
 
-      dots.forEach((dot, index) => {
-        const isActive = index === nextIndex;
-        dot.classList.toggle("is-active", isActive);
-        dot.setAttribute("aria-selected", isActive ? "true" : "false");
-        dot.setAttribute("tabindex", isActive ? "0" : "-1");
-      });
-
-      activeIndex = nextIndex;
+      activeIndex = clampedIndex;
+      updateTrackPosition();
     };
 
     const goToSlide = (index) => {
-      const nextIndex = (index + slides.length) % slides.length;
-      if (nextIndex === activeIndex) {
-        return;
-      }
-
+      const nextIndex = Math.min(Math.max(index, 0), getMaxStartIndex());
       updateSlides(nextIndex);
     };
 
@@ -1033,11 +1054,37 @@ document.documentElement.classList.add("js-enabled");
       goToSlide(activeIndex + 1);
     });
 
-    dots.forEach((dot) => {
-      dot.addEventListener("click", () => {
-        goToSlide(Number(dot.dataset.slide));
-      });
+    track.addEventListener("pointerdown", (event) => {
+      dragStartX = event.clientX;
+      dragDeltaX = 0;
+      track.setPointerCapture?.(event.pointerId);
     });
+
+    track.addEventListener("pointermove", (event) => {
+      if (!dragStartX) {
+        return;
+      }
+
+      dragDeltaX = event.clientX - dragStartX;
+    });
+
+    const endDrag = (event) => {
+      if (!dragStartX) {
+        return;
+      }
+
+      track.releasePointerCapture?.(event.pointerId);
+
+      if (Math.abs(dragDeltaX) > 44) {
+        goToSlide(activeIndex + (dragDeltaX < 0 ? 1 : -1));
+      }
+
+      dragStartX = 0;
+      dragDeltaX = 0;
+    };
+
+    track.addEventListener("pointerup", endDrag);
+    track.addEventListener("pointercancel", endDrag);
 
     carousel.addEventListener("keydown", (event) => {
       if (event.key === "ArrowLeft") {
@@ -1051,6 +1098,11 @@ document.documentElement.classList.add("js-enabled");
       }
     });
 
+    window.addEventListener("resize", () => {
+      activeIndex = Math.min(activeIndex, getMaxStartIndex());
+      startIndex = activeIndex;
+      updateTrackPosition();
+    });
     updateSlides(activeIndex);
   };
 
@@ -1997,27 +2049,6 @@ document.documentElement.classList.add("js-enabled");
     scrollTrigger: {
       trigger: ".strategic__carousel",
       start: "top 82%"
-    }
-  });
-
-  gsap.from(".strategic__controls", {
-    autoAlpha: 0,
-    duration: 0.82,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: ".strategic__controls",
-      start: "top 84%"
-    }
-  });
-
-  gsap.from(".strategic__controls > *", {
-    autoAlpha: 0,
-    duration: 0.82,
-    stagger: 0.08,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: ".strategic__controls",
-      start: "top 84%"
     }
   });
 

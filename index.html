@@ -311,7 +311,7 @@
             
           </div>
         </div>
-        <div class="hero__hover-card hero__hover-card--right">
+        <!-- <div class="hero__hover-card hero__hover-card--right">
           <button class="hero__hover-trigger hero__hover-trigger--gift" type="button"
             aria-describedby="hero-giveaway-preview">
             <span class="hero__hover-trigger-icon hero__hover-trigger-icon--gift" aria-hidden="true">
@@ -326,7 +326,7 @@
             <img class="hero__hover-image" src="./assets/images/giveaway-norway.webp" width="900" height="1125"
               alt="AIMCT Norway giveaway artwork preview" loading="lazy" />
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
     <style>
@@ -1156,41 +1156,17 @@
             </h2>
           </div>
 
-          <div class="strategic__controls" role="tablist" aria-label="Switch strategic challenge">
-            <button class="strategic__arrow strategic__arrow--prev" type="button" aria-label="Previous challenge">
-              &#8249;
-            </button>
-            <button class="strategic__dot is-active" type="button" role="tab" aria-selected="true"
-              aria-controls="strategic-slide-1" data-slide="0">
-              01
-            </button>
-            <button class="strategic__dot" type="button" role="tab" aria-selected="false"
-              aria-controls="strategic-slide-2" data-slide="1">
-              02
-            </button>
-            <button class="strategic__dot" type="button" role="tab" aria-selected="false"
-              aria-controls="strategic-slide-3" data-slide="2">
-              03
-            </button>
-            <button class="strategic__dot" type="button" role="tab" aria-selected="false"
-              aria-controls="strategic-slide-4" data-slide="3">
-              04
-            </button>
-            <button class="strategic__dot" type="button" role="tab" aria-selected="false"
-              aria-controls="strategic-slide-5" data-slide="4">
-              05
-            </button>
-            <button class="strategic__arrow strategic__arrow--next" type="button" aria-label="Next challenge">
-              &#8250;
-            </button>
-          </div>
         </header>
 
         <div class="strategic__carousel" data-strategic-carousel aria-label="Strategic challenges carousel">
-          <div class="strategic__slides">
+          <button class="strategic__arrow strategic__arrow--prev" type="button" aria-label="Previous challenge">
+            &#8249;
+          </button>
+          <div class="strategic__viewport">
+            <div class="strategic__slides" data-strategic-track>
             <article class="strategic-slide is-active" id="strategic-slide-1" aria-hidden="false">
               <div class="strategic-slide__content">
-                <h3 class="strategic-slide__title">01. Operating Offshore Assets Beyond Original Design Life</h3>
+                <h3 class="strategic-slide__title">Operating Offshore Assets Beyond Original Design Life</h3>
                 <!-- <p class="strategic-slide__label">The Reality</p> -->
                 <p class="strategic-slide__summary">
                   Many Norwegian Continental Shelf assets were never expected to operate this long, creating new integrity, maintenance, and reliability challenges.
@@ -1206,7 +1182,7 @@
                 </p> -->
               </div>
               <figure class="strategic-slide__media">
-                <img src="./assets/images/stc1.jpg"
+                <img src="./assets/images/stc1.webp"
                   alt="Aging deepwater infrastructure and FPSO life extension challenge for Norwegian offshore energy assets"
                   loading="lazy" />
               </figure>
@@ -1214,7 +1190,7 @@
 
             <article class="strategic-slide" id="strategic-slide-2" aria-hidden="true">
               <div class="strategic-slide__content">
-                <h3 class="strategic-slide__title">02. Corrosion Under Insulation (CUI)</h3>
+                <h3 class="strategic-slide__title">Corrosion Under Insulation (CUI)</h3>
                 <!-- <p class="strategic-slide__label">The Reality</p> -->
                 <p class="strategic-slide__summary">
                   CUI remains one of the most persistent and costly integrity threats across Norway's mature offshore and processing assets.
@@ -1230,7 +1206,7 @@
                 </p> -->
               </div>
               <figure class="strategic-slide__media">
-                <img src="./assets/images/stc2.jpg"
+                <img src="./assets/images/stc2.webp"
                   alt="Offshore corrosion and corrosion under insulation challenge in marine Norway energy environments"
                   loading="lazy" />
               </figure>
@@ -1238,7 +1214,7 @@
 
             <article class="strategic-slide" id="strategic-slide-3" aria-hidden="true">
               <div class="strategic-slide__content">
-                <h3 class="strategic-slide__title">03. Managing Integrity During Major Turnarounds</h3>
+                <h3 class="strategic-slide__title">Managing Integrity During Major Turnarounds</h3>
                 <!-- <p class="strategic-slide__label">The Reality</p> -->
                 <p class="strategic-slide__summary">
                   Turnarounds are among the highest-risk periods for offshore facilities, requiring careful planning and execution.
@@ -1254,7 +1230,7 @@
                 </p> -->
               </div>
               <figure class="strategic-slide__media">
-                <img src="./assets/images/stc7.webp"
+                <img src="./assets/images/stc3.webp"
                   alt="Subsea inspection and monitoring challenge for deepwater oil and gas infrastructure"
                   loading="lazy" />
               </figure>
@@ -1262,7 +1238,7 @@
 
             <article class="strategic-slide" id="strategic-slide-4" aria-hidden="true">
               <div class="strategic-slide__content">
-                <h3 class="strategic-slide__title">04. Protecting Critical Gas Infrastructure</h3>
+                <h3 class="strategic-slide__title">Protecting Critical Gas Infrastructure</h3>
                 <!-- <p class="strategic-slide__label">The Reality</p> -->
                 <p class="strategic-slide__summary">
                   Norway's gas export infrastructure plays a vital role in European energy security and requires exceptional reliability.
@@ -1285,7 +1261,7 @@
 
             <article class="strategic-slide" id="strategic-slide-5" aria-hidden="true">
               <div class="strategic-slide__content">
-                <h3 class="strategic-slide__title">05. Infrastructure Readiness for CCS & Future Energy Systems</h3>
+                <h3 class="strategic-slide__title">Infrastructure Readiness for CCS & Future Energy Systems</h3>
                 <!-- <p class="strategic-slide__label">The Reality</p> -->
                 <p class="strategic-slide__summary">
                   Existing offshore infrastructure is being evaluated for future carbon capture and storage applications.
@@ -1306,7 +1282,11 @@
                   loading="lazy" />
               </figure>
             </article>
+            </div>
           </div>
+          <button class="strategic__arrow strategic__arrow--next" type="button" aria-label="Next challenge">
+            &#8250;
+          </button>
 
         </div>
       </div>

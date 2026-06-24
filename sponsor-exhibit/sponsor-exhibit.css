@@ -85,19 +85,19 @@
 }
 
 .booth-interest-card__input:checked + .booth-interest-card__body {
-  border-color: rgba(255, 204, 0, 0.62);
-  background: rgba(255, 204, 0, 0.12);
-  box-shadow: 0 0 0 1px rgba(255, 204, 0, 0.2);
+  border-color: rgba(26, 95, 168, 0.72);
+  background: rgba(26, 95, 168, 0.16);
+  box-shadow: 0 0 0 1px rgba(26, 95, 168, 0.24);
 }
 
 .booth-interest-card__input:checked + .booth-interest-card__body::after {
-  border-color: rgba(255, 204, 0, 0.82);
+  border-color: rgba(56, 189, 248, 0.72);
   background: var(--color-accent);
 }
 
 .booth-interest-card__input:focus-visible + .booth-interest-card__body {
-  border-color: rgba(255, 204, 0, 0.72);
-  box-shadow: 0 0 0 2px rgba(255, 204, 0, 0.2);
+  border-color: rgba(56, 189, 248, 0.62);
+  box-shadow: 0 0 0 2px rgba(26, 95, 168, 0.22);
 }
 
 .booth-form__actions .booth-submit,
